@@ -1,0 +1,9 @@
+rules:
+  - id: cqbench-test-eval
+    languages: [python]
+    message: Test-only unsafe eval rule
+    severity: ERROR
+    metadata:
+      cwe: CWE-95
+    pattern: eval(...)
+
