@@ -38,11 +38,6 @@
       "rows": 27346,
       "sha256": "ab8e4d5309e7171fbc36ba4c598ea0c7b6dde38703832269d87d47726b0c46ea"
     },
-    "manual_audit_candidates": {
-      "path": "manual_audit/candidates.jsonl",
-      "rows": 150,
-      "sha256": "3ea6d117ec4e17b41a0142cde1fe76aef7b5033d14f24232814a5e22cdb75464"
-    },
     "references": {
       "path": "references.jsonl",
       "rows": 27346,
@@ -101,16 +96,6 @@
     "java": 10103,
     "python": 10354
   },
-  "manual_audit": {
-    "count": 150,
-    "design": "10 seeded tasks per within-language difficulty quintile",
-    "language_counts": {
-      "c": 50,
-      "java": 50,
-      "python": 50
-    }
-  },
-  "manual_validation_status": "pending",
   "minimum_required_task_count": 15000,
   "profile_counts": {
     "defect_consensus": 13693,

@@ -1,0 +1,21 @@
+Java
+    1. Human - ChatGPT
+        CrystalBLEU: 12.61% (min: 0.000, max: 1.000, median: 0.080, Q1: 0.010, Q3: 0.180, stdev: 0.146)
+        ED: 30.41% (min: 0.003, max: 0.976, median: 0.290, Q1: 0.222, Q3: 0.368, stdev: 0.127)
+    2. Human - DSC
+        CrystalBLEU: 16.28% (min: 0.000, max: 1.000, median: 0.130, Q1: 0.030, Q3: 0.240, stdev: 0.163)
+        ED: 28.20% (min: 0.000, max: 0.991, median: 0.276, Q1: 0.203, Q3: 0.358, stdev: 0.151)
+    3. Human - Qwen
+        CrystalBLEU: 21.04% (min: 0.000, max: 1.000, median: 0.150, Q1: 0.030, Q3: 0.320, stdev: 0.215)
+        ED: 35.25% (min: 0.000, max: 0.992, median: 0.333, Q1: 0.228, Q3: 0.452, stdev: 0.182)
+
+Python
+    1. Human - ChatGPT
+        CrystalBLEU: 6.33% (min: 0.000, max: 1.000, median: 0.010, Q1: 0.000, Q3: 0.090, stdev: 0.102)
+        ED: 26.35% (min: 0.001, max: 1.000, median: 0.261, Q1: 0.201, Q3: 0.317, stdev: 0.103)
+    2. Human - DSC
+        CrystalBLEU: 11.81% (min: 0.000, max: 1.000, median: 0.090, Q1: 0.020, Q3: 0.170, stdev: 0.124)
+        ED: 26.80% (min: 0.000, max: 1.000, median: 0.278, Q1: 0.210, Q3: 0.335, stdev: 0.121)
+    3. Human - Qwen
+        CrystalBLEU: 13.90% (min: 0.000, max: 1.000, median: 0.110, Q1: 0.040, Q3: 0.200, stdev: 0.134)
+        ED: 29.34% (min: 0.001, max: 1.000, median: 0.292, Q1: 0.202, Q3: 0.372, stdev: 0.138)

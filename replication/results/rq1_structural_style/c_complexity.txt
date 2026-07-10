@@ -1,0 +1,34 @@
+Stats for human_code (280405 functions):
+  NLOC                 | Avg:  26.41 | Min:   1 | Max: 369 | Std:  25.43
+  CCN                  | Avg:   5.97 | Min:   1 | Max: 182 | Std:   6.90
+  TOKEN_COUNT          | Avg: 253.49 | Min:   4 | Max: 7403 | Std: 262.18
+  FUNCTION_NAME_LENGTH | Avg:  18.33 | Min:   1 | Max:  91 | Std:   7.86
+  UNIQUE_TOKENS        | Total: 60120
+
+Stats for dsc_code (298044 functions):
+  NLOC                 | Avg:   6.84 | Min:   1 | Max:  56 | Std:   4.56
+  CCN                  | Avg:   1.89 | Min:   1 | Max:  28 | Std:   1.32
+  TOKEN_COUNT          | Avg:  69.76 | Min:   4 | Max: 323 | Std:  45.15
+  FUNCTION_NAME_LENGTH | Avg:  15.07 | Min:   1 | Max: 174 | Std:   8.70
+  UNIQUE_TOKENS        | Total: 50195
+
+Stats for qwen_code (304984 functions):
+  NLOC                 | Avg:  10.66 | Min:   1 | Max:  82 | Std:   8.38
+  CCN                  | Avg:   2.82 | Min:   1 | Max:  88 | Std:   2.38
+  TOKEN_COUNT          | Avg:  97.14 | Min:   4 | Max: 472 | Std:  76.92
+  FUNCTION_NAME_LENGTH | Avg:  17.65 | Min:   1 | Max: 273 | Std:   7.92
+  UNIQUE_TOKENS        | Total: 50454
+
+Stats for gptoss_code (270935 functions):
+  NLOC                 | Avg:  14.51 | Min:   2 | Max: 110 | Std:   9.54
+  CCN                  | Avg:   4.68 | Min:   1 | Max:  75 | Std:   3.52
+  TOKEN_COUNT          | Avg: 146.57 | Min:   8 | Max: 659 | Std:  98.03
+  FUNCTION_NAME_LENGTH | Avg:  18.31 | Min:   1 | Max:  91 | Std:   7.84
+  UNIQUE_TOKENS        | Total: 53514
+
+Aggregated Stats across ALL models (1154368 functions):
+  NLOC                 | Avg:  14.40 | Min:   1 | Max: 369 | Std:  16.00
+  CCN                  | Avg:   3.78 | Min:   1 | Max: 182 | Std:   4.35
+  TOKEN_COUNT          | Avg: 139.65 | Min:   4 | Max: 7403 | Std: 161.06
+  FUNCTION_NAME_LENGTH | Avg:  17.30 | Min:   1 | Max: 273 | Std:   8.21
+  UNIQUE_TOKENS        | Total: 66094

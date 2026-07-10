@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import hashlib
 import json
 from collections import Counter
 from pathlib import Path
@@ -17,11 +16,6 @@ from .structural import analyze_structure, canonical_prompt, extract_signature
 
 DEFAULT_DIFFICULTY_THRESHOLD = 3
 MINIMUM_BENCHMARK_SIZE = 15_000
-
-
-def _stable_value(value: str) -> int:
-    digest = hashlib.sha256(f"{SEED}:{value}".encode("utf-8")).digest()
-    return int.from_bytes(digest[:8], "big")
 
 
 def _difficulty_evidence(
@@ -301,94 +295,6 @@ def _build_language(
     return sorted(records, key=lambda row: row["task_id"]), counts
 
 
-def _audit_sample(
-    records: list[dict[str, Any]],
-    threshold: int,
-) -> list[dict[str, Any]]:
-    selected: list[dict[str, Any]] = []
-    for language in ("python", "java", "c"):
-        language_rows = sorted(
-            (row for row in records if row["language"] == language),
-            key=lambda row: (row["difficulty"]["score"], row["task_id"]),
-        )
-        assert len(language_rows) >= 50
-        for quintile in range(5):
-            start = quintile * len(language_rows) // 5
-            stop = (quintile + 1) * len(language_rows) // 5
-            pool = language_rows[start:stop]
-            chosen = sorted(
-                pool,
-                key=lambda row: _stable_value(row["task_id"]),
-            )[:10]
-            for row in chosen:
-                row = dict(row)
-                row["audit_quintile"] = quintile + 1
-                selected.append(row)
-    assert len(selected) == 150
-
-    enriched: list[dict[str, Any]] = []
-    by_language = {
-        language: [row for row in selected if row["language"] == language]
-        for language in ("python", "java", "c")
-    }
-    for language, rows in by_language.items():
-        specification = LANGUAGES[language]
-        keys = [row["source_id"] for row in rows]
-        raw_vulnerabilities = load_raw_vulnerabilities(
-            language,
-            specification.authors,
-            keys,
-        )
-        for row in rows:
-            signature = extract_signature(row["codes"]["human"], language)
-            structures = {
-                author: analyze_structure(
-                    code,
-                    language,
-                    signature,
-                    human_token_count=row["human_metrics"]["token_count"],
-                    human_ast_count=row["human_metrics"]["ast_node_count"],
-                ).to_dict()
-                for author, code in row["codes"].items()
-            }
-            selection = {
-                **row["difficulty"],
-                "difficulty_threshold": threshold,
-                "difficulty_quintile": row["audit_quintile"],
-                "cwe_by_author": {
-                    author: sorted(
-                        cwes_from_raw(
-                            raw_vulnerabilities[(author, row["source_id"])]
-                        )
-                    )
-                    for author in specification.authors
-                },
-            }
-            enriched.append(
-                {
-                    key: row[key]
-                    for key in (
-                        "benchmark_version",
-                        "task_id",
-                        "language",
-                        "source_id",
-                        "stratum",
-                        "docstring",
-                        "signature",
-                        "prompt",
-                        "codes",
-                        "content_sha256",
-                    )
-                }
-                | {
-                    "selection": selection,
-                    "structures": structures,
-                    "audit_quintile": row["audit_quintile"],
-                }
-            )
-    return sorted(enriched, key=lambda row: row["task_id"])
-
-
 def build_large_benchmark(
     output_dir: Path,
     *,
@@ -468,17 +374,9 @@ def build_large_benchmark(
         openai,
         overwrite=overwrite,
     )
-    audit = _audit_sample(records, threshold)
-    counts["manual_audit_candidates"] = write_jsonl_atomic(
-        output_dir / "manual_audit/candidates.jsonl",
-        audit,
-        overwrite=overwrite,
-    )
-
     artifact_paths = {
         "tasks": output_dir / "tasks.jsonl",
         "references": output_dir / "references.jsonl",
-        "manual_audit_candidates": output_dir / "manual_audit/candidates.jsonl",
         **{
             f"baseline_{author}": output_dir / "baselines" / f"{author}.jsonl"
             for author in (*all_authors, "openai")
@@ -492,7 +390,6 @@ def build_large_benchmark(
         "benchmark_version": BENCHMARK_VERSION,
         "release_profile": "large-issue-prone-challenge-set",
         "selection_status": "automated-threshold",
-        "manual_validation_status": "pending",
         "seed": SEED,
         "task_count": len(records),
         "minimum_required_task_count": MINIMUM_BENCHMARK_SIZE,
@@ -521,11 +418,6 @@ def build_large_benchmark(
         "language_counts": dict(Counter(row["language"] for row in records)),
         "profile_counts": dict(Counter(row["stratum"] for row in records)),
         "drop_counts": drop_counts,
-        "manual_audit": {
-            "count": len(audit),
-            "design": "10 seeded tasks per within-language difficulty quintile",
-            "language_counts": dict(Counter(row["language"] for row in audit)),
-        },
         "analysis_profile": {
             "pylint": "3.3.6",
             "pmd": "7.11.0",
@@ -608,17 +500,6 @@ def audit_large_benchmark(output_dir: Path) -> dict[str, Any]:
         assert len(ids) == len(set(ids))
         assert set(ids) == expected
         coverage[author] = len(ids)
-    audit = list(read_jsonl(output_dir / "manual_audit/candidates.jsonl"))
-    assert len(audit) == 150
-    assert set(row["task_id"] for row in audit) <= expected_ids
-    audit_cells = Counter(
-        (row["language"], row["audit_quintile"]) for row in audit
-    )
-    assert all(
-        audit_cells[(language, quintile)] == 10
-        for language in ("python", "java", "c")
-        for quintile in range(1, 6)
-    )
     for artifact in manifest["artifacts"].values():
         path = output_dir / artifact["path"]
         assert sha256_file(path) == artifact["sha256"]
@@ -633,7 +514,5 @@ def audit_large_benchmark(output_dir: Path) -> dict[str, Any]:
         "language_counts": dict(Counter(row["language"] for row in tasks)),
         "profile_counts": dict(Counter(row["stratum"] for row in tasks)),
         "baseline_coverage": coverage,
-        "manual_audit_count": len(audit),
-        "manual_audit_cells": len(audit_cells),
         "hashes_valid": True,
     }

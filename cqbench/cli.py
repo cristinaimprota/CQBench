@@ -12,11 +12,6 @@ from .historical import (
 )
 from .large import audit_large_benchmark, build_large_benchmark
 from .report import compare_results, write_report
-from .review import (
-    agreement,
-    review_candidates,
-    write_adjudication_template,
-)
 from .rules import vendor_rules
 
 
@@ -53,22 +48,6 @@ def parser() -> argparse.ArgumentParser:
     )
     large_historical.add_argument("--output", type=Path, required=True)
     large_historical.add_argument("--overwrite", action="store_true")
-
-    review = commands.add_parser("review")
-    review.add_argument("--candidates", type=Path, required=True)
-    review.add_argument("--output", type=Path, required=True)
-    review.add_argument("--reviewer", required=True)
-
-    agree = commands.add_parser("review-agreement")
-    agree.add_argument("--left", type=Path, required=True)
-    agree.add_argument("--right", type=Path, required=True)
-    agree.add_argument("--output", type=Path)
-
-    adjudicate = commands.add_parser("adjudication-template")
-    adjudicate.add_argument("--left", type=Path, required=True)
-    adjudicate.add_argument("--right", type=Path, required=True)
-    adjudicate.add_argument("--output", type=Path, required=True)
-    adjudicate.add_argument("--overwrite", action="store_true")
 
     large = commands.add_parser("build-large")
     large.add_argument("--output-dir", type=Path, required=True)
@@ -142,24 +121,6 @@ def main() -> None:
                         args.model,
                         args.output,
                         overwrite=args.overwrite,
-                    )
-                }
-            )
-        )
-    elif args.command == "review":
-        review_candidates(args.candidates, args.output, args.reviewer)
-    elif args.command == "review-agreement":
-        value = agreement(args.left, args.right)
-        text = json.dumps(value, indent=2, sort_keys=True)
-        if args.output:
-            args.output.write_text(text + "\n", encoding="utf-8")
-        print(text)
-    elif args.command == "adjudication-template":
-        print(
-            json.dumps(
-                {
-                    "adjudications": write_adjudication_template(
-                        args.left, args.right, args.output, overwrite=args.overwrite
                     )
                 }
             )

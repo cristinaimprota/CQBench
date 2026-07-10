@@ -1,0 +1,214 @@
+
+Stats for human_code (229712 functions):
+  NLOC                   | Avg:    13.94 | Min:     1.00 | Median:     9.00 | P90:    28.00 | Max:  1619.00 | Std:    18.91
+  CCN                    | Avg:     3.63 | Min:     1.00 | Median:     2.00 | P90:     7.00 | Max:   771.00 | Std:     5.77
+  PARAMETER_COUNT        | Avg:     1.46 | Min:     0.00 | Median:     1.00 | P90:     3.00 | Max:    22.00 | Std:     1.16
+  MAX_NESTING_DEPTH      | Avg:     1.06 | Min:     0.00 | Median:     1.00 | P90:     3.00 | Max:    18.00 | Std:     1.16
+  DISTINCT_OPERATORS     | Avg:    16.19 | Min:     3.00 | Median:    15.00 | P90:    23.00 | Max:    44.00 | Std:     4.79
+  TOTAL_OPERATORS        | Avg:    69.43 | Min:     3.00 | Median:    44.00 | P90:   139.00 | Max:  8590.00 | Std:   100.86
+  DISTINCT_OPERANDS      | Avg:    17.63 | Min:     1.00 | Median:    13.00 | P90:    33.00 | Max:  1049.00 | Std:    15.19
+  TOTAL_OPERANDS         | Avg:    38.42 | Min:     1.00 | Median:    23.00 | P90:    77.00 | Max:  8069.00 | Std:    66.03
+  HALSTEAD_VOLUME        | Avg:   598.72 | Min:     8.00 | Median:   323.85 | P90:  1241.24 | Max: 128155.82 | Std:  1218.22
+  HALSTEAD_DIFFICULTY    | Avg:    16.35 | Min:     1.50 | Median:    13.56 | P90:    27.76 | Max:   433.56 | Std:    10.71
+  HALSTEAD_EFFORT        | Avg: 18235.15 | Min:    12.00 | Median:  4336.72 | P90: 32584.07 | Max: 39705069.48 | Std: 168940.35
+  MAINTAINABILITY_INDEX  | Avg:    60.02 | Min:     0.00 | Median:    61.28 | P90:    72.98 | Max:    91.53 | Std:    10.47
+
+Stats for chatgpt_code (256734 functions):
+  NLOC                   | Avg:     8.60 | Min:     1.00 | Median:     7.00 | P90:    17.00 | Max:   344.00 | Std:     7.28
+  CCN                    | Avg:     2.41 | Min:     1.00 | Median:     2.00 | P90:     5.00 | Max:   172.00 | Std:     2.40
+  PARAMETER_COUNT        | Avg:     1.43 | Min:     0.00 | Median:     1.00 | P90:     3.00 | Max:    19.00 | Std:     1.04
+  MAX_NESTING_DEPTH      | Avg:     0.82 | Min:     0.00 | Median:     1.00 | P90:     2.00 | Max:    12.00 | Std:     0.97
+  DISTINCT_OPERATORS     | Avg:    14.06 | Min:     1.00 | Median:    14.00 | P90:    20.00 | Max:    40.00 | Std:     4.61
+  TOTAL_OPERATORS        | Avg:    42.36 | Min:     2.00 | Median:    31.00 | P90:    86.00 | Max:  1635.00 | Std:    41.22
+  DISTINCT_OPERANDS      | Avg:    12.12 | Min:     1.00 | Median:    10.00 | P90:    23.00 | Max:   343.00 | Std:     8.90
+  TOTAL_OPERANDS         | Avg:    23.96 | Min:     1.00 | Median:    17.00 | P90:    50.00 | Max:  1007.00 | Std:    24.63
+  HALSTEAD_VOLUME        | Avg:   336.03 | Min:     3.00 | Median:   225.62 | P90:   726.90 | Max: 18937.33 | Std:   391.63
+  HALSTEAD_DIFFICULTY    | Avg:    13.40 | Min:     0.50 | Median:    11.67 | P90:    23.07 | Max:   348.66 | Std:     8.69
+  HALSTEAD_EFFORT        | Avg:  7136.15 | Min:     1.50 | Median:  2675.66 | P90: 15915.43 | Max: 3854404.62 | Std: 21930.45
+  MAINTAINABILITY_INDEX  | Avg:    65.36 | Min:     0.00 | Median:    65.15 | P90:    77.24 | Max:    92.41 | Std:     9.54
+
+Stats for dsc_code (292211 functions):
+  NLOC                   | Avg:     6.81 | Min:     1.00 | Median:     6.00 | P90:    13.00 | Max:    54.00 | Std:     4.34
+  CCN                    | Avg:     1.86 | Min:     1.00 | Median:     1.00 | P90:     3.00 | Max:    40.00 | Std:     1.35
+  PARAMETER_COUNT        | Avg:     1.23 | Min:     0.00 | Median:     1.00 | P90:     2.00 | Max:    20.00 | Std:     0.98
+  MAX_NESTING_DEPTH      | Avg:     0.62 | Min:     0.00 | Median:     0.00 | P90:     2.00 | Max:    15.00 | Std:     0.81
+  DISTINCT_OPERATORS     | Avg:    13.26 | Min:     3.00 | Median:    13.00 | P90:    19.00 | Max:    34.00 | Std:     4.09
+  TOTAL_OPERATORS        | Avg:    31.85 | Min:     3.00 | Median:    26.00 | P90:    63.00 | Max:   227.00 | Std:    23.21
+  DISTINCT_OPERANDS      | Avg:    10.30 | Min:     1.00 | Median:     9.00 | P90:    20.00 | Max:    64.00 | Std:     6.88
+  TOTAL_OPERANDS         | Avg:    18.02 | Min:     1.00 | Median:    14.00 | P90:    38.00 | Max:   205.00 | Std:    14.58
+  HALSTEAD_VOLUME        | Avg:   241.27 | Min:     8.00 | Median:   185.75 | P90:   520.13 | Max:  2060.85 | Std:   207.10
+  HALSTEAD_DIFFICULTY    | Avg:    11.37 | Min:     1.50 | Median:    10.50 | P90:    18.89 | Max:   102.00 | Std:     6.07
+  HALSTEAD_EFFORT        | Avg:  3746.06 | Min:    12.00 | Median:  1933.01 | P90:  9344.74 | Max: 141460.51 | Std:  5293.62
+  MAINTAINABILITY_INDEX  | Avg:    67.77 | Min:    36.92 | Median:    67.30 | P90:    77.78 | Max:    92.41 | Std:     8.42
+
+Stats for qwen_code (304554 functions):
+  NLOC                   | Avg:     6.24 | Min:     1.00 | Median:     3.00 | P90:    13.00 | Max:    79.00 | Std:     5.69
+  CCN                    | Avg:     1.93 | Min:     1.00 | Median:     1.00 | P90:     4.00 | Max:    41.00 | Std:     1.78
+  PARAMETER_COUNT        | Avg:     1.38 | Min:     0.00 | Median:     1.00 | P90:     3.00 | Max:    20.00 | Std:     1.20
+  MAX_NESTING_DEPTH      | Avg:     0.55 | Min:     0.00 | Median:     0.00 | P90:     2.00 | Max:     9.00 | Std:     0.86
+  DISTINCT_OPERATORS     | Avg:    12.06 | Min:     3.00 | Median:    11.00 | P90:    19.00 | Max:    35.00 | Std:     4.71
+  TOTAL_OPERATORS        | Avg:    29.82 | Min:     3.00 | Median:    18.00 | P90:    68.00 | Max:   377.00 | Std:    30.26
+  DISTINCT_OPERANDS      | Avg:     9.35 | Min:     1.00 | Median:     7.00 | P90:    19.00 | Max:    98.00 | Std:     7.36
+  TOTAL_OPERANDS         | Avg:    16.70 | Min:     1.00 | Median:    10.00 | P90:    38.00 | Max:   280.00 | Std:    18.24
+  HALSTEAD_VOLUME        | Avg:   225.97 | Min:     8.00 | Median:   120.93 | P90:   550.02 | Max:  3566.58 | Std:   272.38
+  HALSTEAD_DIFFICULTY    | Avg:    10.21 | Min:     1.50 | Median:     8.33 | P90:    19.56 | Max:   156.33 | Std:     7.24
+  HALSTEAD_EFFORT        | Avg:  3947.81 | Min:    12.00 | Median:   985.15 | P90: 10474.86 | Max: 321796.81 | Std:  8381.89
+  MAINTAINABILITY_INDEX  | Avg:    70.56 | Min:    29.97 | Median:    73.87 | P90:    82.23 | Max:    91.53 | Std:    10.33
+
+Aggregated Stats across ALL fields (1083211 functions):
+  NLOC                   | Avg:     8.58 | Min:     1.00 | Median:     6.00 | P90:    17.00 | Max:  1619.00 | Std:    10.54
+  CCN                    | Avg:     2.38 | Min:     1.00 | Median:     1.00 | P90:     5.00 | Max:   771.00 | Std:     3.20
+  PARAMETER_COUNT        | Avg:     1.37 | Min:     0.00 | Median:     1.00 | P90:     3.00 | Max:    22.00 | Std:     1.10
+  MAX_NESTING_DEPTH      | Avg:     0.74 | Min:     0.00 | Median:     0.00 | P90:     2.00 | Max:    18.00 | Std:     0.96
+  DISTINCT_OPERATORS     | Avg:    13.74 | Min:     1.00 | Median:    13.00 | P90:    20.00 | Max:    44.00 | Std:     4.78
+  TOTAL_OPERATORS        | Avg:    41.74 | Min:     2.00 | Median:    29.00 | P90:    84.00 | Max:  8590.00 | Std:    56.50
+  DISTINCT_OPERANDS      | Avg:    12.02 | Min:     1.00 | Median:    10.00 | P90:    23.00 | Max:  1049.00 | Std:    10.25
+  TOTAL_OPERANDS         | Avg:    23.38 | Min:     1.00 | Median:    16.00 | P90:    48.00 | Max:  8069.00 | Std:    35.88
+  HALSTEAD_VOLUME        | Avg:   335.23 | Min:     3.00 | Median:   206.44 | P90:   701.00 | Max: 128155.82 | Std:   635.58
+  HALSTEAD_DIFFICULTY    | Avg:    12.58 | Min:     0.50 | Median:    11.00 | P90:    22.00 | Max:   433.56 | Std:     8.49
+  HALSTEAD_EFFORT        | Avg:  7678.92 | Min:     1.50 | Median:  2292.48 | P90: 14672.25 | Max: 39705069.48 | Std: 78902.50
+  MAINTAINABILITY_INDEX  | Avg:    66.34 | Min:     0.00 | Median:    66.14 | P90:    78.80 | Max:    92.41 | Std:    10.40
+
+Statistical tests (Welch, MWU, Cliff's delta + bootstrap CI)
+p-values use SciPy; q-values use Benjamini-Hochberg FDR.
+Bootstrap resamples: 1000
+
+Metric: nloc
+  chatgpt_code vs dsc_code | t= 108.594, p=0.000e+00 (q=0.000e+00) | U=42507331043.0, p=0.000e+00 (q=0.000e+00) | delta=+0.133 [+0.130, +0.136]
+  chatgpt_code vs human_code | t=-127.290, p=0.000e+00 (q=0.000e+00) | U=21721231700.5, p=0.000e+00 (q=0.000e+00) | delta=-0.263 [-0.266, -0.260]
+  chatgpt_code vs qwen_code | t= 133.494, p=0.000e+00 (q=0.000e+00) | U=51295267455.5, p=0.000e+00 (q=0.000e+00) | delta=+0.312 [+0.309, +0.315]
+  dsc_code vs human_code | t=-177.131, p=0.000e+00 (q=0.000e+00) | U=20326600163.5, p=0.000e+00 (q=0.000e+00) | delta=-0.394 [-0.397, -0.392]
+  dsc_code vs qwen_code | t=  43.915, p=0.000e+00 (q=0.000e+00) | U=54073647392.0, p=0.000e+00 (q=0.000e+00) | delta=+0.215 [+0.212, +0.218]
+  human_code vs qwen_code | t= 188.954, p=0.000e+00 (q=0.000e+00) | U=52798925461.0, p=0.000e+00 (q=0.000e+00) | delta=+0.509 [+0.507, +0.512]
+
+Metric: ccn
+  chatgpt_code vs dsc_code | t= 103.106, p=0.000e+00 (q=0.000e+00) | U=42704691320.5, p=0.000e+00 (q=0.000e+00) | delta=+0.138 [+0.136, +0.141]
+  chatgpt_code vs human_code | t= -94.242, p=0.000e+00 (q=0.000e+00) | U=23895041654.0, p=0.000e+00 (q=0.000e+00) | delta=-0.190 [-0.193, -0.187]
+  chatgpt_code vs qwen_code | t=  83.584, p=0.000e+00 (q=0.000e+00) | U=45776757152.5, p=0.000e+00 (q=0.000e+00) | delta=+0.171 [+0.168, +0.174]
+  dsc_code vs human_code | t=-144.061, p=0.000e+00 (q=0.000e+00) | U=22682971394.5, p=0.000e+00 (q=0.000e+00) | delta=-0.324 [-0.327, -0.321]
+  dsc_code vs qwen_code | t= -17.759, p=1.542e-70 (q=1.609e-70) | U=46434902821.0, p=2.915e-237 (q=2.956e-237) | delta=+0.044 [+0.041, +0.046]
+  human_code vs qwen_code | t= 136.263, p=0.000e+00 (q=0.000e+00) | U=47012810672.0, p=0.000e+00 (q=0.000e+00) | delta=+0.344 [+0.341, +0.347]
+
+Metric: parameter_count
+  chatgpt_code vs dsc_code | t=  71.492, p=0.000e+00 (q=0.000e+00) | U=41772059275.0, p=0.000e+00 (q=0.000e+00) | delta=+0.114 [+0.111, +0.117]
+  chatgpt_code vs human_code | t= -12.079, p=1.385e-33 (q=1.405e-33) | U=29368289097.5, p=9.647e-03 (q=9.647e-03) | delta=-0.004 [-0.007, -0.001]
+  chatgpt_code vs qwen_code | t=  17.057, p=3.236e-65 (q=3.328e-65) | U=41185515488.0, p=2.686e-294 (q=2.803e-294) | delta=+0.053 [+0.051, +0.056]
+  dsc_code vs human_code | t= -77.166, p=0.000e+00 (q=0.000e+00) | U=29771512397.0, p=0.000e+00 (q=0.000e+00) | delta=-0.113 [-0.116, -0.110]
+  dsc_code vs qwen_code | t= -51.108, p=0.000e+00 (q=0.000e+00) | U=42110884932.5, p=0.000e+00 (q=0.000e+00) | delta=-0.054 [-0.056, -0.051]
+  human_code vs qwen_code | t=  27.398, p=3.817e-165 (q=4.101e-165) | U=36914058169.5, p=1.012e-292 (q=1.041e-292) | delta=+0.055 [+0.052, +0.058]
+
+Metric: max_nesting_depth
+  chatgpt_code vs dsc_code | t=  84.244, p=0.000e+00 (q=0.000e+00) | U=41591098054.5, p=0.000e+00 (q=0.000e+00) | delta=+0.109 [+0.106, +0.112]
+  chatgpt_code vs human_code | t= -79.073, p=0.000e+00 (q=0.000e+00) | U=26158862574.0, p=0.000e+00 (q=0.000e+00) | delta=-0.113 [-0.116, -0.110]
+  chatgpt_code vs qwen_code | t= 108.579, p=0.000e+00 (q=0.000e+00) | U=45629846640.0, p=0.000e+00 (q=0.000e+00) | delta=+0.167 [+0.164, +0.170]
+  dsc_code vs human_code | t=-157.956, p=0.000e+00 (q=0.000e+00) | U=26170645769.0, p=0.000e+00 (q=0.000e+00) | delta=-0.220 [-0.223, -0.217]
+  dsc_code vs qwen_code | t=  29.171, p=6.123e-187 (q=6.783e-187) | U=47353029705.5, p=0.000e+00 (q=0.000e+00) | delta=+0.064 [+0.062, +0.067]
+  human_code vs qwen_code | t= 178.262, p=0.000e+00 (q=0.000e+00) | U=44520134255.5, p=0.000e+00 (q=0.000e+00) | delta=+0.273 [+0.270, +0.275]
+
+Metric: distinct_operators
+  chatgpt_code vs dsc_code | t=  67.489, p=0.000e+00 (q=0.000e+00) | U=40892487940.5, p=0.000e+00 (q=0.000e+00) | delta=+0.090 [+0.087, +0.093]
+  chatgpt_code vs human_code | t=-157.709, p=0.000e+00 (q=0.000e+00) | U=22164556039.0, p=0.000e+00 (q=0.000e+00) | delta=-0.248 [-0.251, -0.245]
+  chatgpt_code vs qwen_code | t= 160.230, p=0.000e+00 (q=0.000e+00) | U=49145094025.0, p=0.000e+00 (q=0.000e+00) | delta=+0.257 [+0.254, +0.260]
+  dsc_code vs human_code | t=-233.876, p=0.000e+00 (q=0.000e+00) | U=21937211345.0, p=0.000e+00 (q=0.000e+00) | delta=-0.346 [-0.349, -0.344]
+  dsc_code vs qwen_code | t= 105.275, p=0.000e+00 (q=0.000e+00) | U=52721423190.0, p=0.000e+00 (q=0.000e+00) | delta=+0.185 [+0.182, +0.188]
+  human_code vs qwen_code | t= 314.453, p=0.000e+00 (q=0.000e+00) | U=51630572470.5, p=0.000e+00 (q=0.000e+00) | delta=+0.476 [+0.473, +0.479]
+
+Metric: total_operators
+  chatgpt_code vs dsc_code | t= 114.322, p=0.000e+00 (q=0.000e+00) | U=42704700053.5, p=0.000e+00 (q=0.000e+00) | delta=+0.138 [+0.135, +0.141]
+  chatgpt_code vs human_code | t=-119.962, p=0.000e+00 (q=0.000e+00) | U=21023096264.0, p=0.000e+00 (q=0.000e+00) | delta=-0.287 [-0.290, -0.284]
+  chatgpt_code vs qwen_code | t= 127.859, p=0.000e+00 (q=0.000e+00) | U=49791728015.5, p=0.000e+00 (q=0.000e+00) | delta=+0.274 [+0.271, +0.276]
+  dsc_code vs human_code | t=-174.984, p=0.000e+00 (q=0.000e+00) | U=19130711041.0, p=0.000e+00 (q=0.000e+00) | delta=-0.430 [-0.433, -0.427]
+  dsc_code vs qwen_code | t=  29.121, p=2.688e-186 (q=2.933e-186) | U=51668795363.0, p=0.000e+00 (q=0.000e+00) | delta=+0.161 [+0.158, +0.164]
+  human_code vs qwen_code | t= 182.144, p=0.000e+00 (q=0.000e+00) | U=53236543903.0, p=0.000e+00 (q=0.000e+00) | delta=+0.522 [+0.519, +0.524]
+
+Metric: distinct_operands
+  chatgpt_code vs dsc_code | t=  83.669, p=0.000e+00 (q=0.000e+00) | U=41789426368.0, p=0.000e+00 (q=0.000e+00) | delta=+0.114 [+0.111, +0.117]
+  chatgpt_code vs human_code | t=-152.262, p=0.000e+00 (q=0.000e+00) | U=20900514891.0, p=0.000e+00 (q=0.000e+00) | delta=-0.291 [-0.294, -0.288]
+  chatgpt_code vs qwen_code | t= 125.552, p=0.000e+00 (q=0.000e+00) | U=47901411634.5, p=0.000e+00 (q=0.000e+00) | delta=+0.225 [+0.222, +0.228]
+  dsc_code vs human_code | t=-214.677, p=0.000e+00 (q=0.000e+00) | U=20312902554.5, p=0.000e+00 (q=0.000e+00) | delta=-0.395 [-0.398, -0.392]
+  dsc_code vs qwen_code | t=  51.755, p=0.000e+00 (q=0.000e+00) | U=49348259250.5, p=0.000e+00 (q=0.000e+00) | delta=+0.109 [+0.106, +0.112]
+  human_code vs qwen_code | t= 240.975, p=0.000e+00 (q=0.000e+00) | U=52522840483.0, p=0.000e+00 (q=0.000e+00) | delta=+0.502 [+0.499, +0.504]
+
+Metric: total_operands
+  chatgpt_code vs dsc_code | t= 106.849, p=0.000e+00 (q=0.000e+00) | U=42790876565.5, p=0.000e+00 (q=0.000e+00) | delta=+0.141 [+0.138, +0.144]
+  chatgpt_code vs human_code | t= -98.947, p=0.000e+00 (q=0.000e+00) | U=21860348622.5, p=0.000e+00 (q=0.000e+00) | delta=-0.259 [-0.262, -0.256]
+  chatgpt_code vs qwen_code | t= 123.594, p=0.000e+00 (q=0.000e+00) | U=49320108673.0, p=0.000e+00 (q=0.000e+00) | delta=+0.262 [+0.259, +0.264]
+  dsc_code vs human_code | t=-145.276, p=0.000e+00 (q=0.000e+00) | U=20199045707.5, p=0.000e+00 (q=0.000e+00) | delta=-0.398 [-0.401, -0.395]
+  dsc_code vs qwen_code | t=  31.042, p=2.173e-211 (q=2.445e-211) | U=50362457640.0, p=0.000e+00 (q=0.000e+00) | delta=+0.132 [+0.129, +0.135]
+  human_code vs qwen_code | t= 153.299, p=0.000e+00 (q=0.000e+00) | U=52593417768.5, p=0.000e+00 (q=0.000e+00) | delta=+0.504 [+0.501, +0.506]
+
+Metric: halstead_volume
+  chatgpt_code vs dsc_code | t= 109.849, p=0.000e+00 (q=0.000e+00) | U=42656594003.0, p=0.000e+00 (q=0.000e+00) | delta=+0.137 [+0.134, +0.140]
+  chatgpt_code vs human_code | t= -98.879, p=0.000e+00 (q=0.000e+00) | U=21219451241.0, p=0.000e+00 (q=0.000e+00) | delta=-0.280 [-0.283, -0.277]
+  chatgpt_code vs qwen_code | t= 120.009, p=0.000e+00 (q=0.000e+00) | U=49675411970.5, p=0.000e+00 (q=0.000e+00) | delta=+0.271 [+0.268, +0.273]
+  dsc_code vs human_code | t=-139.061, p=0.000e+00 (q=0.000e+00) | U=19542983910.5, p=0.000e+00 (q=0.000e+00) | delta=-0.418 [-0.420, -0.415]
+  dsc_code vs qwen_code | t=  24.478, p=2.949e-132 (q=3.123e-132) | U=51301848053.0, p=0.000e+00 (q=0.000e+00) | delta=+0.153 [+0.150, +0.156]
+  human_code vs qwen_code | t= 143.960, p=0.000e+00 (q=0.000e+00) | U=53136522451.5, p=0.000e+00 (q=0.000e+00) | delta=+0.519 [+0.517, +0.522]
+
+Metric: halstead_difficulty
+  chatgpt_code vs dsc_code | t=  98.839, p=0.000e+00 (q=0.000e+00) | U=42308278187.5, p=0.000e+00 (q=0.000e+00) | delta=+0.128 [+0.125, +0.131]
+  chatgpt_code vs human_code | t=-104.804, p=0.000e+00 (q=0.000e+00) | U=23467165806.5, p=0.000e+00 (q=0.000e+00) | delta=-0.204 [-0.207, -0.201]
+  chatgpt_code vs qwen_code | t= 147.534, p=0.000e+00 (q=0.000e+00) | U=49942848264.0, p=0.000e+00 (q=0.000e+00) | delta=+0.277 [+0.275, +0.280]
+  dsc_code vs human_code | t=-199.079, p=0.000e+00 (q=0.000e+00) | U=22092139733.5, p=0.000e+00 (q=0.000e+00) | delta=-0.342 [-0.345, -0.339]
+  dsc_code vs qwen_code | t=  67.205, p=0.000e+00 (q=0.000e+00) | U=52340978610.0, p=0.000e+00 (q=0.000e+00) | delta=+0.176 [+0.173, +0.179]
+  human_code vs qwen_code | t= 236.873, p=0.000e+00 (q=0.000e+00) | U=50933971482.5, p=0.000e+00 (q=0.000e+00) | delta=+0.456 [+0.453, +0.459]
+
+Metric: halstead_effort
+  chatgpt_code vs dsc_code | t=  76.395, p=0.000e+00 (q=0.000e+00) | U=42715121983.5, p=0.000e+00 (q=0.000e+00) | delta=+0.139 [+0.136, +0.142]
+  chatgpt_code vs human_code | t= -31.253, p=5.552e-214 (q=6.345e-214) | U=21898381556.0, p=0.000e+00 (q=0.000e+00) | delta=-0.257 [-0.261, -0.254]
+  chatgpt_code vs qwen_code | t=  69.509, p=0.000e+00 (q=0.000e+00) | U=49985428218.0, p=0.000e+00 (q=0.000e+00) | delta=+0.279 [+0.276, +0.282]
+  dsc_code vs human_code | t= -41.090, p=0.000e+00 (q=0.000e+00) | U=20085284668.0, p=0.000e+00 (q=0.000e+00) | delta=-0.402 [-0.404, -0.399]
+  dsc_code vs qwen_code | t= -11.164, p=6.167e-29 (q=6.167e-29) | U=51874555110.0, p=0.000e+00 (q=0.000e+00) | delta=+0.166 [+0.163, +0.169]
+  human_code vs qwen_code | t=  40.496, p=0.000e+00 (q=0.000e+00) | U=52603357589.0, p=0.000e+00 (q=0.000e+00) | delta=+0.504 [+0.501, +0.506]
+
+Metric: maintainability_index
+  chatgpt_code vs dsc_code | t= -98.484, p=0.000e+00 (q=0.000e+00) | U=32188539203.5, p=0.000e+00 (q=0.000e+00) | delta=-0.142 [-0.145, -0.139]
+  chatgpt_code vs human_code | t= 184.958, p=0.000e+00 (q=0.000e+00) | U=37662472835.5, p=0.000e+00 (q=0.000e+00) | delta=+0.277 [+0.274, +0.280]
+  chatgpt_code vs qwen_code | t=-196.118, p=0.000e+00 (q=0.000e+00) | U=27064325637.5, p=0.000e+00 (q=0.000e+00) | delta=-0.308 [-0.311, -0.305]
+  dsc_code vs human_code | t= 288.574, p=0.000e+00 (q=0.000e+00) | U=47539526245.0, p=0.000e+00 (q=0.000e+00) | delta=+0.416 [+0.414, +0.419]
+  dsc_code vs qwen_code | t=-115.005, p=0.000e+00 (q=0.000e+00) | U=35534604940.0, p=0.000e+00 (q=0.000e+00) | delta=-0.201 [-0.205, -0.199]
+  human_code vs qwen_code | t=-366.509, p=0.000e+00 (q=0.000e+00) | U=16642600320.0, p=0.000e+00 (q=0.000e+00) | delta=-0.524 [-0.527, -0.522]
+
+Paired Wilcoxon signed-rank tests
+Pairing: same row_id with function_index_in_row == 0
+Headline metrics: nloc, ccn, max_nesting_depth, halstead_volume, maintainability_index
+
+Paired metric: nloc
+  chatgpt_code vs dsc_code | n_pairs= 197976 | W=  5394143686.0, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>dsc_code)=0.556
+  chatgpt_code vs human_code | n_pairs= 220590 | W=  5982942942.5, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>human_code)=0.343
+  chatgpt_code vs qwen_code | n_pairs= 216776 | W=  5501340684.5, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>qwen_code)=0.650
+  dsc_code vs human_code | n_pairs= 197764 | W=  3866493653.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.306
+  dsc_code vs qwen_code | n_pairs= 194820 | W=  5443263798.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>qwen_code)=0.605
+  human_code vs qwen_code | n_pairs= 217008 | W=  3521846696.0, p=0.000e+00 (q=0.000e+00) | dominance(human_code>qwen_code)=0.777
+
+Paired metric: ccn
+  chatgpt_code vs dsc_code | n_pairs= 197976 | W=  1895535191.0, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>dsc_code)=0.617
+  chatgpt_code vs human_code | n_pairs= 220590 | W=  3561075475.5, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>human_code)=0.353
+  chatgpt_code vs qwen_code | n_pairs= 216776 | W=  2361753305.5, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>qwen_code)=0.614
+  dsc_code vs human_code | n_pairs= 197764 | W=  1976913250.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.274
+  dsc_code vs qwen_code | n_pairs= 194820 | W=  2235083868.5, p=4.524e-75 (q=4.680e-75) | dominance(dsc_code>qwen_code)=0.494
+  human_code vs qwen_code | n_pairs= 217008 | W=  2202918802.5, p=0.000e+00 (q=0.000e+00) | dominance(human_code>qwen_code)=0.742
+
+Paired metric: max_nesting_depth
+  chatgpt_code vs dsc_code | n_pairs= 197976 | W=  1599204888.5, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>dsc_code)=0.586
+  chatgpt_code vs human_code | n_pairs= 220590 | W=  3212062094.0, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>human_code)=0.416
+  chatgpt_code vs qwen_code | n_pairs= 216776 | W=  1616401390.0, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>qwen_code)=0.629
+  dsc_code vs human_code | n_pairs= 197764 | W=  2059283536.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.346
+  dsc_code vs qwen_code | n_pairs= 194820 | W=  1688077936.0, p=5.010e-75 (q=5.010e-75) | dominance(dsc_code>qwen_code)=0.539
+  human_code vs qwen_code | n_pairs= 217008 | W=  1889997564.5, p=0.000e+00 (q=0.000e+00) | dominance(human_code>qwen_code)=0.698
+
+Paired metric: halstead_volume
+  chatgpt_code vs dsc_code | n_pairs= 197976 | W=  7909654648.0, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>dsc_code)=0.542
+  chatgpt_code vs human_code | n_pairs= 220590 | W=  7432683482.0, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>human_code)=0.346
+  chatgpt_code vs qwen_code | n_pairs= 216776 | W=  8051246665.5, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>qwen_code)=0.603
+  dsc_code vs human_code | n_pairs= 197764 | W=  4717289188.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.307
+  dsc_code vs qwen_code | n_pairs= 194820 | W=  7178523439.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>qwen_code)=0.571
+  human_code vs qwen_code | n_pairs= 217008 | W=  4359698066.0, p=0.000e+00 (q=0.000e+00) | dominance(human_code>qwen_code)=0.758
+
+Paired metric: maintainability_index
+  chatgpt_code vs dsc_code | n_pairs= 197976 | W=  7929433553.5, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>dsc_code)=0.457
+  chatgpt_code vs human_code | n_pairs= 220590 | W=  7206443543.5, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>human_code)=0.653
+  chatgpt_code vs qwen_code | n_pairs= 216776 | W=  6859657930.0, p=0.000e+00 (q=0.000e+00) | dominance(chatgpt_code>qwen_code)=0.384
+  dsc_code vs human_code | n_pairs= 197764 | W=  4656858688.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.689
+  dsc_code vs qwen_code | n_pairs= 194820 | W=  6140724385.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>qwen_code)=0.416
+  human_code vs qwen_code | n_pairs= 217008 | W=  3624769714.0, p=0.000e+00 (q=0.000e+00) | dominance(human_code>qwen_code)=0.241

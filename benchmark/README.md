@@ -6,9 +6,6 @@ This is the primary CQBench artifact. It contains 27,346 tasks:
 - Java: 10,103
 - C: 6,889
 
-The 150 tasks under `manual_audit/` are a validation sample, not the benchmark
-population.
-
 ## Inclusion criterion
 
 For each historical model output, require:
@@ -31,19 +28,6 @@ valid output with both ratios below 0.10 is labeled
 
 The formula, drop counts, analyzer versions, rule hash, artifact hashes, and
 counts are recorded in `manifest.json`.
-
-## Manual validation
-
-`manual_audit/candidates.jsonl` contains 50 tasks per language and 10 per
-within-language difficulty quintile. Two reviewers should independently check
-prompt clarity, reference adequacy, missing context, and finding validity.
-
-```bash
-conda run -n labgpuenv python -m cqbench review \
-  --candidates cqbench_data/v1/benchmark/manual_audit/candidates.jsonl \
-  --reviewer reviewer-1 \
-  --output cqbench_data/v1/benchmark/manual_audit/reviewer-1.jsonl
-```
 
 ## Evaluation
 

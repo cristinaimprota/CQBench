@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.DS_Store
+# experiment output (see runs/*/README.md); not part of the benchmark artifact
+runs/

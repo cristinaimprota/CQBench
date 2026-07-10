@@ -1,0 +1,67 @@
+Total skipped functions: 11585 (errors + incompatible rules)
+Total scanned functions: 280518 (100%)
+Total clean functions: 243957 (86.97%)
+Total defective functions (excluding errors): 24976 (8.90%)
+Total errors: 16096. Errors w/o duplicates: 11585 (4.13%)
+Total issues (considering multiple issues per function and excluding errors): 58061
+
+Final Unified CWE Set (without duplicates): 28
+
+Top 10 CWEs by occurrence (across all severities):
+ 1. CWE-120: 29164
+ 2. CWE-126: 12035
+ 3. CWE-676: 8606
+ 4. CWE-362: 3089
+ 5. CWE-190: 1116
+ 6. CWE-134: 961
+ 7. CWE-20: 679
+ 8. CWE-78: 598
+ 9. CWE-327: 381
+10. CWE-416: Use After Free: 282
+
+Severity types: {'WARNING', 'INFO', 'ERROR'}
+CWEs divided by severity:
+{'ERROR': {'CWE-120': 11307,
+           'CWE-134': 935,
+           'CWE-20': 62,
+           "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')": 30,
+           'CWE-250': 1,
+           'CWE-327': 11,
+           'CWE-362': 260,
+           'CWE-377': 14,
+           'CWE-415: Double Free': 208,
+           'CWE-416: Use After Free': 234,
+           'CWE-476: NULL Pointer Dereference': 45,
+           'CWE-676': 26,
+           'CWE-732: Incorrect Permission Assignment for Critical Resource': 2,
+           'CWE-78': 421,
+           'CWE-807': 9},
+ 'INFO': {'CWE-120': 16858,
+          'CWE-126': 12035,
+          'CWE-14: Compiler Removal of Code to Clear Buffers': 76,
+          'CWE-190': 1116,
+          'CWE-319: CLEARTEXT TRANSMISSION OF SENSITIVE INFORMATION': 1,
+          'CWE-328: Use of Weak Hash': 110,
+          'CWE-362': 2829,
+          'CWE-377': 55,
+          'CWE-611: Improper Restriction of XML External Entity Reference': 4,
+          'CWE-676': 310,
+          'CWE-732: Incorrect Permission Assignment for Critical Resource': 66,
+          'CWE-78': 167},
+ 'WARNING': {'CWE-120': 999,
+             'CWE-125: Out-of-bounds Read': 70,
+             'CWE-131: Incorrect Calculation of Buffer Size': 13,
+             'CWE-134': 26,
+             'CWE-20': 617,
+             'CWE-295: Improper Certificate Validation': 4,
+             'CWE-319: CLEARTEXT TRANSMISSION OF SENSITIVE INFORMATION': 3,
+             'CWE-327': 370,
+             'CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition': 19,
+             'CWE-377': 13,
+             'CWE-416: Use After Free': 48,
+             'CWE-467: Use of sizeof() on a Pointer Type': 224,
+             'CWE-676': 8270,
+             'CWE-732: Incorrect Permission Assignment for Critical Resource': 60,
+             'CWE-774: Allocation of File Descriptors or Handles Without Limits or Throttling': 1,
+             'CWE-78': 10,
+             'CWE-787: Out-of-bounds Write': 122}}

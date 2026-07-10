@@ -1,0 +1,92 @@
+Specify name of model to analyze: 
+Clang-tidy + ODC stats
+────────────────────────────
+Total number of defects: 190828
+Total number of defective samples: 118915 (42.39%)
+Total number of samples with syntax errors: 32232 (11.49%)
+Total number of syntax error messages: 56283
+Average number of defects per sample: 1.60
+
+Total defects divided per ODC Defect Type::
+  - Interface: 91854
+  - Algorithm/Method: 42273
+  - Assignment: 25439
+  - Function/Class/Object: 22567
+  - Checking: 4360
+  - Timing/Serialization: 4335
+
+Top 10 defects:
+  - bugprone-easily-swappable-parameters: 86448
+  - misc-unused-parameters: 22567
+  - hicpp-signed-bitwise: 20958
+  - performance-no-int-to-ptr: 16255
+  - bugprone-branch-clone: 13664
+  - bugprone-reserved-identifier: 8498
+  - bugprone-narrowing-conversions: 4565
+  - concurrency-mt-unsafe: 4335
+  - cppcoreguidelines-avoid-non-const-global-variables: 3991
+  - cert-err34-c: 2215
+
+Distribution of ODC Defect Types per sample:
+  - 95140 samples in 1 different ODC defect types
+  - 21124 samples in 2 different ODC defect types
+  - 2474 samples in 3 different ODC defect types
+  - 172 samples in 4 different ODC defect types
+  - 5 samples in 5 different ODC defect types
+
+Distrbution of defects per ODC Defect Type:
+
+  Interface (91854)
+   • bugprone-easily-swappable-parameters: 86448
+   • cppcoreguidelines-avoid-non-const-global-variables: 3991
+   • bugprone-multi-level-implicit-pointer-conversion: 613
+   • cert-env33-c: 365
+   • bugprone-unsafe-functions: 232
+   • performance-type-promotion-in-math-fn: 117
+   • bugprone-not-null-terminated-result: 85
+   • clang-analyzer-core.CallAndMessage: 3
+
+  Function/Class/Object (22567)
+   • misc-unused-parameters: 22567
+
+  Algorithm/Method (42273)
+   • hicpp-signed-bitwise: 20958
+   • bugprone-branch-clone: 13664
+   • bugprone-narrowing-conversions: 4565
+   • bugprone-implicit-widening-of-multiplication-result: 1172
+   • misc-no-recursion: 749
+   • cert-msc50-cpp: 500
+   • bugprone-infinite-loop: 204
+   • bugprone-signed-char-misuse: 171
+   • misc-redundant-expression: 126
+   • bugprone-suspicious-realloc-usage: 63
+   • bugprone-integer-division: 35
+   • bugprone-inc-dec-in-conditions: 21
+   • clang-analyzer-core.BitwiseShift: 12
+   • cert-flp30-c: 12
+   • bugprone-misplaced-widening-cast: 12
+   • bugprone-too-small-loop-variable: 6
+   • cert-msc51-cpp: 2
+   • bugprone-incorrect-roundings: 1
+
+  Assignment (25439)
+   • performance-no-int-to-ptr: 16255
+   • bugprone-reserved-identifier: 8498
+   • bugprone-assignment-in-if-condition: 669
+   • clang-analyzer-core.uninitialized.Assign: 11
+   • clang-analyzer-core.UndefinedBinaryOperatorResult: 5
+   • clang-analyzer-core.uninitialized.UndefReturn: 1
+
+  Timing/Serialization (4335)
+   • concurrency-mt-unsafe: 4335
+
+  Checking (4360)
+   • cert-err34-c: 2215
+   • hicpp-multiway-paths-covered: 1596
+   • bugprone-switch-missing-default-case: 430
+   • bugprone-sizeof-expression: 60
+   • bugprone-suspicious-string-compare: 35
+   • clang-analyzer-core.NullDereference: 19
+   • bugprone-macro-parentheses: 2
+   • clang-analyzer-core.DivideZero: 2
+   • clang-analyzer-core.StackAddressEscape: 1

@@ -1,0 +1,202 @@
+Did you change the total size of the dataset?
+📊 Statistiche PMD + ODC
+────────────────────────────
+🔢 Numero totale di funzioni nel dataset: 221795
+🔢 Numero totale di difetti (ODC != --): 123180
+🔣 Numero di file UNICI difettosi: 60389 (27.23%)
+➗ Numero medio di difetti per file difettoso: 2.04
+🧨 File unici con ParseException: 624
+
+📂 Difetti per categoria ODC:
+  - Assignment: 36100
+  - Checking: 34015
+  - Algorithm: 33380
+  - Function/Class/Object: 11344
+  - Timing: 7392
+  - Interface: 949
+
+🔍 Difetti più frequenti (regole PMD):
+  - UnusedFormalParameter: 24660
+  - SystemPrintln: 13329
+  - UseVarargs: 5826
+  - AppendCharacterWithChar: 5715
+  - AvoidInstantiatingObjectsInLoops: 5577
+  - SignatureDeclareThrowsException: 5113
+  - AvoidThrowingRawExceptionTypes: 4237
+  - AvoidSynchronizedAtMethodLevel: 4049
+  - LiteralsFirstInComparisons: 3939
+  - AvoidCatchingGenericException: 3938
+
+📌 Distribuzione #categorie ODC per file:
+  - 50434 file con 1 categorie ODC distinte
+  - 8877 file con 2 categorie ODC distinte
+  - 1017 file con 3 categorie ODC distinte
+  - 60 file con 4 categorie ODC distinte
+  - 1 file con 5 categorie ODC distinte
+
+📚 Distribuzione delle regole PMD per ciascuna categoria ODC:
+
+🔸 Checking (34015 difetti totali)
+   • SystemPrintln: 13329
+   • SignatureDeclareThrowsException: 5113
+   • AvoidThrowingRawExceptionTypes: 4237
+   • AvoidCatchingGenericException: 3938
+   • AvoidPrintStackTrace: 1468
+   • AvoidUncheckedExceptionsInSignatures: 1263
+   • AvoidThrowingNullPointerException: 1163
+   • GuardLogStatement: 1116
+   • PreserveStackTrace: 809
+   • ExceptionAsFlowControl: 766
+   • EmptyCatchBlock: 436
+   • AvoidRethrowingException: 149
+   • AvoidThrowingNewInstanceOfSameException: 109
+   • AvoidCatchingThrowable: 74
+   • DoNotThrowExceptionInFinally: 23
+   • AvoidInstanceofChecksInCatchClause: 13
+   • AvoidCatchingNPE: 4
+   • ReturnFromFinallyBlock: 4
+   • InvalidLogMessageFormat: 1
+
+🔸 Function/Class/Object (11344 difetti totali)
+   • UseVarargs: 5826
+   • ImmutableField: 2546
+   • UseObjectForClearerAPI: 736
+   • UnusedPrivateField: 585
+   • TooManyMethods: 419
+   • MissingSerialVersionUID: 235
+   • ArrayIsStoredDirectly: 183
+   • ExcessiveParameterList: 169
+   • SingletonClassReturningNewInstance: 139
+   • MissingOverride: 118
+   • AvoidFieldNameMatchingMethodName: 107
+   • MethodReturnsInternalArray: 87
+   • AvoidFieldNameMatchingTypeName: 45
+   • CouplingBetweenObjects: 28
+   • SingleMethodSingleton: 20
+   • OverrideBothEqualsAndHashcode: 17
+   • CloneMethodMustImplementCloneable: 13
+   • AvoidAccessibilityAlteration: 13
+   • LooseCoupling: 9
+   • UselessOverridingMethod: 7
+   • SingularField: 7
+   • UnitTestShouldUseTestAnnotation: 6
+   • ConstructorCallsOverridableMethod: 6
+   • FinalizeShouldBeProtected: 5
+   • TestClassWithoutTestCases: 4
+   • FinalizeOnlyCallsSuperFinalize: 4
+   • SuspiciousEqualsMethodName: 2
+   • CloneMethodMustBePublic: 2
+   • NonSerializableClass: 2
+   • DoNotExtendJavaLangThrowable: 2
+   • EmptyFinalizer: 1
+   • ProperCloneImplementation: 1
+
+🔸 Algorithm (33380 difetti totali)
+   • AppendCharacterWithChar: 5715
+   • AvoidInstantiatingObjectsInLoops: 5577
+   • LiteralsFirstInComparisons: 3939
+   • CyclomaticComplexity: 3663
+   • ConsecutiveAppendsShouldReuse: 2600
+   • ConsecutiveLiteralAppends: 1879
+   • CognitiveComplexity: 1566
+   • SimplifyBooleanReturns: 1397
+   • CollapsibleIfStatements: 1148
+   • InsufficientStringBufferDeclaration: 1086
+   • AvoidDeeplyNestedIfStmts: 1079
+   • NPathComplexity: 541
+   • ReturnEmptyCollectionRatherThanNull: 468
+   • ForLoopCanBeForeach: 384
+   • InefficientEmptyStringCheck: 343
+   • AvoidArrayLoops: 299
+   • UseStringBufferForStringAppends: 263
+   • UseIndexOfChar: 179
+   • NonExhaustiveSwitch: 162
+   • CompareObjectsWithEquals: 154
+   • TooFewBranchesForSwitch: 147
+   • DoNotTerminateVM: 115
+   • UseArrayListInsteadOfVector: 88
+   • SimplifyConditional: 64
+   • AvoidUsingOctalValues: 56
+   • SimplifyBooleanExpressions: 50
+   • WhileLoopWithLiteralBoolean: 44
+   • ForLoopVariableCount: 40
+   • AvoidBranchingStatementAsLastInLoop: 35
+   • InefficientStringBuffering: 30
+   • PrimitiveWrapperInstantiation: 25
+   • DoubleBraceInitialization: 22
+   • SimplifiedTernary: 21
+   • UselessStringValueOf: 21
+   • ImplicitSwitchFallThrough: 20
+   • DoNotCallGarbageCollectionExplicitly: 19
+   • UnnecessaryCaseChange: 19
+   • AddEmptyString: 18
+   • NcssCount: 16
+   • UseEqualsToCompareStrings: 16
+   • UnusedNullCheckInEquals: 13
+   • StringInstantiation: 12
+   • IdempotentOperations: 8
+   • LogicInversion: 6
+   • SwitchDensity: 6
+   • UselessOperationOnImmutable: 6
+   • DontUseFloatTypeForLoopIndices: 5
+   • UnconditionalIfStatement: 4
+   • ConfusingArgumentToVarargsMethod: 3
+   • UnnecessaryVarargsArrayCreation: 2
+   • UseTryWithResources: 2
+   • ExhaustiveSwitchHasDefault: 1
+   • ReplaceVectorWithList: 1
+   • StringToString: 1
+   • MisplacedNullCheck: 1
+   • InstantiationToGetClass: 1
+
+🔸 Timing (7392 difetti totali)
+   • AvoidSynchronizedAtMethodLevel: 4049
+   • DoNotUseThreads: 2605
+   • AvoidSynchronizedStatement: 680
+   • UseNotifyAllInsteadOfNotify: 23
+   • AvoidThreadGroup: 13
+   • UseConcurrentHashMap: 8
+   • DoubleCheckedLocking: 7
+   • AvoidUsingVolatile: 6
+   • NonThreadSafeSingleton: 1
+
+🔸 Assignment (36100 difetti totali)
+   • UnusedFormalParameter: 24660
+   • AssignmentInOperand: 3078
+   • AvoidReassigningParameters: 2664
+   • UnusedLocalVariable: 1776
+   • UnusedAssignment: 1668
+   • NullAssignment: 1459
+   • AvoidReassigningLoopVariables: 477
+   • OneDeclarationPerLine: 284
+   • RedundantFieldInitializer: 28
+   • AvoidStringBufferField: 5
+   • AssignmentToNonFinalStatic: 1
+
+🔸 Interface (949 difetti totali)
+   • CloseResource: 388
+   • AvoidUsingHardCodedIP: 287
+   • UseProperClassLoader: 266
+   • SimpleDateFormatNeedsLocale: 4
+   • AvoidFileStream: 2
+   • DoNotHardCodeSDCard: 2
+
+🚨 Errori di elaborazione PMD
+────────────────────────────
+❌ Totale processingErrors: 3537 (1.59%)
+
+📌 Tipi di eccezioni incontrate:
+  - ParseException: 3120
+  - LexException: 245
+  - ContextedRuntimeException: 147
+  - SemanticException: 20
+  - MalformedSourceException: 5
+
+🧨 File unici con ParseException: 624
+
+📶 Distribuzione delle priorità (severity):
+  - Priority 1: 6077
+  - Priority 2: 17343
+  - Priority 3: 227607
+  - Priority 4: 6134
+  - Priority 5: 1

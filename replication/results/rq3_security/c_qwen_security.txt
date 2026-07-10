@@ -1,0 +1,63 @@
+Total skipped functions: 26754 (errors + incompatible rules)
+Total scanned functions: 280518 (100%)
+Total clean functions: 234925 (83.75%)
+Total defective functions (excluding errors): 18839 (6.72%)
+Total errors: 26796. Errors w/o duplicates: 26754 (9.54%)
+Total issues (considering multiple issues per function and excluding errors): 36973
+
+Final Unified CWE Set (without duplicates): 27
+
+Top 10 CWEs by occurrence (across all severities):
+ 1. CWE-120: 14231
+ 2. CWE-126: 7713
+ 3. CWE-676: Use of Potentially Dangerous Function: 6900
+ 4. CWE-362: 3739
+ 5. CWE-190: 807
+ 6. CWE-78: 615
+ 7. CWE-416: Use After Free: 611
+ 8. CWE-20: 556
+ 9. CWE-134: Use of Externally-Controlled Format String: 497
+10. CWE-327: 250
+
+Severity types: {'ERROR', 'WARNING', 'INFO'}
+CWEs divided by severity:
+{'ERROR': {'CWE-120': 4446,
+           'CWE-134: Use of Externally-Controlled Format String': 483,
+           'CWE-20': 56,
+           "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')": 46,
+           'CWE-327': 5,
+           'CWE-362': 379,
+           'CWE-415: Double Free': 102,
+           'CWE-416: Use After Free': 591,
+           'CWE-476: NULL Pointer Dereference': 20,
+           'CWE-732': 2,
+           'CWE-78': 444,
+           'CWE-807': 5,
+           'CWE-918: Server-Side Request Forgery (SSRF)': 1},
+ 'INFO': {'CWE-120': 9589,
+          'CWE-126': 7713,
+          'CWE-14: Compiler Removal of Code to Clear Buffers': 30,
+          'CWE-190': 807,
+          'CWE-328: Use of Weak Hash': 190,
+          'CWE-362': 3360,
+          'CWE-377': 45,
+          'CWE-611: Improper Restriction of XML External Entity Reference': 16,
+          'CWE-676: Use of Potentially Dangerous Function': 366,
+          'CWE-732': 24,
+          'CWE-78': 167},
+ 'WARNING': {'CWE-120': 196,
+             'CWE-125: Out-of-bounds Read': 116,
+             'CWE-131: Incorrect Calculation of Buffer Size': 2,
+             'CWE-134: Use of Externally-Controlled Format String': 14,
+             'CWE-20': 500,
+             'CWE-295: Improper Certificate Validation': 4,
+             'CWE-327': 245,
+             'CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition': 27,
+             'CWE-377': 34,
+             'CWE-416: Use After Free': 20,
+             'CWE-467: Use of sizeof() on a Pointer Type': 156,
+             'CWE-676: Use of Potentially Dangerous Function': 6534,
+             'CWE-732': 37,
+             'CWE-774: Allocation of File Descriptors or Handles Without Limits or Throttling': 1,
+             'CWE-78': 4,
+             'CWE-787: Out-of-bounds Write': 196}}

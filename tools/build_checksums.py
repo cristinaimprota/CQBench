@@ -16,13 +16,22 @@ def digest(path: Path) -> str:
     return value.hexdigest()
 
 
+# Directories that are not part of the published benchmark artifact:
+# caches, git internals, editable-install metadata, and experiment output.
+EXCLUDED_PARTS = {"__pycache__", ".pytest_cache", ".git", "runs"}
+
+
+def _excluded(path: Path) -> bool:
+    return any(
+        part in EXCLUDED_PARTS or part.endswith(".egg-info")
+        for part in path.relative_to(ROOT).parts
+    )
+
+
 paths = sorted(
     path
     for path in ROOT.rglob("*")
-    if path.is_file()
-    and path != OUTPUT
-    and "__pycache__" not in path.parts
-    and ".pytest_cache" not in path.parts
+    if path.is_file() and path != OUTPUT and not _excluded(path)
 )
 lines = [
     f"{digest(path)}  {path.relative_to(ROOT).as_posix()}"

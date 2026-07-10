@@ -2,9 +2,9 @@
 
 Automated package validation is complete. Before publishing this directory:
 
-- Complete and adjudicate the 150-task manual audit, then replace the
-  placeholder sentence in `paper/benchmark_section.*` with agreement and
-  error-rate results.
+- Source dataset deposited on Zenodo: DOI 10.5281/zenodo.21282648 (recorded in
+  `data/DATA.md`). Publish `data/dataset.sha256` alongside the deposit and confirm
+  the archive's file paths match the table in `data/DATA.md`.
 - Add the license selected by the dataset/code owners. No license is inferred
   here because that is a legal/ownership decision.
 - Add repository URL, author list, version date, and DOI/archive identifier to

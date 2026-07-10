@@ -16,11 +16,13 @@ sample of all programming tasks.
 - `benchmark/baselines/`: historical Human, OpenAI, DeepSeek, and Qwen code.
 - `benchmark/results/`: keyed historical evaluation results.
 - `benchmark/reports/`: tables and PNG/PDF figures.
-- `benchmark/manual_audit/candidates.jsonl`: 150-task manual-validation sample.
-- `cqbench/`: evaluator, reporting, review, and audit implementation.
+- `cqbench/`: evaluator, reporting, and audit implementation.
 - `cqbench/rules/`: frozen Semgrep rules and rule manifest.
 - `mappings/`: language-organized analyzer-to-ODC mappings.
-- `paper/`: paper-ready benchmark description in Markdown and LaTeX.
+- `replication/`: study scripts (metrics, naturalness) and result summaries for
+  transparency; see `replication/README.md`.
+- `experiments/`: worked example evaluations (e.g. `claude-opus-4-8/`).
+- `data/DATA.md`: pointer to the full dataset (hosted on Zenodo).
 - `Dockerfile`: pinned container environment.
 - `MANIFEST.sha256`: integrity hashes for exported files.
 
@@ -34,15 +36,21 @@ CQBench-v1-export/
 │   ├── baselines/
 │   ├── results/
 │   ├── reports/
-│   ├── comparisons/
-│   └── manual_audit/
+│   └── comparisons/
 ├── cqbench/
 │   └── rules/
 ├── mappings/
 │   ├── python/pylint_odc.xlsx
 │   ├── java/pmd_odc.xlsx
 │   └── c/clang_tidy_odc.xlsx
-├── paper/
+├── data/
+│   └── DATA.md
+├── replication/
+│   ├── scripts/       (metrics, naturalness)
+│   ├── results/       (rq1–rq4)
+│   └── calibration/   (§4.2 model consistency)
+├── experiments/
+│   └── claude-opus-4-8/   (worked example run)
 ├── support/
 ├── tests/
 ├── tools/
@@ -150,19 +158,14 @@ python -m cqbench compare \
 
 No p-values are reported.
 
-## Manual validation
+## Dataset
 
-The 150-task audit sample contains 50 tasks per language and 10 per
-within-language difficulty quintile. Reviewers assess prompt clarity, human
-reference adequacy, missing-context artifacts, and finding validity. It is not
-the benchmark population.
-
-```bash
-python -m cqbench review \
-  --candidates benchmark/manual_audit/candidates.jsonl \
-  --reviewer reviewer-1 \
-  --output benchmark/manual_audit/reviewer-1.jsonl
-```
+The benchmark tasks, references, baselines, and results in `benchmark/` are
+self-contained. The full source dataset — the ⟨docstring, human-code,
+LLM-code⟩ tuples and per-function metric tables the tasks are derived from — is
+hosted on Zenodo (it is too large to ship in this repository). See
+[`data/DATA.md`](data/DATA.md) for the DOI, contents, checksums, and where to
+place each file.
 
 ## Interpretation constraint
 

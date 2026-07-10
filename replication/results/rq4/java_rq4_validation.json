@@ -1,0 +1,202 @@
+{
+  "assertions": {
+    "all_joins_explicitly_resolved_to_hm_index": true,
+    "complexity_uses_all_computable_function_means": true,
+    "outcomes_integer_nonnegative": true,
+    "own_author_oof_entropy_exactly_one": true,
+    "predictors_non_null_and_finite": true,
+    "sample_nloc_is_whole_sample_physical_nloc": true,
+    "semgrep_complete_scan_coverage": true,
+    "unique_hm_index_author": true
+  },
+  "authors": {
+    "chatgpt": {
+      "complexity_dropped_full": 641,
+      "complexity_retained_full": 221155,
+      "complexity_source": {
+        "aggregate_rows": 221796,
+        "functions_computable": 257323,
+        "functions_detected": 257569,
+        "functions_dropped": 246,
+        "samples_without_computable_functions": 641
+      },
+      "defect_source_rows": 116489,
+      "entropy_own_author_rows": 221796,
+      "outcome_zero_counts": {
+        "def_algorithm": 194809,
+        "def_assignment": 200999,
+        "def_checking": 192544,
+        "def_function_class_object": 206245,
+        "def_interface": 216037,
+        "def_timing": 216417,
+        "defects_total": 143069,
+        "vulns_high_sev": 216746,
+        "vulns_total": 202823
+      },
+      "predictor_nulls": {
+        "ccn": 0,
+        "distinct_operands": 0,
+        "distinct_operators": 0,
+        "halstead_difficulty": 0,
+        "halstead_effort": 0,
+        "halstead_v": 0,
+        "max_nesting_depth": 0,
+        "mi": 0,
+        "naturalness": 0,
+        "nloc": 0,
+        "parameter_count": 0,
+        "sample_nloc": 0,
+        "total_operands": 0,
+        "total_operators": 0
+      },
+      "sample_rows": 221155,
+      "semgrep": {
+        "error_functions": 1314,
+        "sampled_error_functions": 1272,
+        "scanned": 221796
+      }
+    },
+    "dsc": {
+      "complexity_dropped_full": 23616,
+      "complexity_retained_full": 198180,
+      "complexity_source": {
+        "aggregate_rows": 221796,
+        "functions_computable": 291795,
+        "functions_detected": 292007,
+        "functions_dropped": 212,
+        "samples_without_computable_functions": 23616
+      },
+      "defect_source_rows": 153159,
+      "entropy_own_author_rows": 221796,
+      "outcome_zero_counts": {
+        "def_algorithm": 180879,
+        "def_assignment": 176436,
+        "def_checking": 151064,
+        "def_function_class_object": 152119,
+        "def_interface": 188865,
+        "def_timing": 186581,
+        "defects_total": 87690,
+        "vulns_high_sev": 192186,
+        "vulns_total": 154271
+      },
+      "predictor_nulls": {
+        "ccn": 0,
+        "distinct_operands": 0,
+        "distinct_operators": 0,
+        "halstead_difficulty": 0,
+        "halstead_effort": 0,
+        "halstead_v": 0,
+        "max_nesting_depth": 0,
+        "mi": 0,
+        "naturalness": 0,
+        "nloc": 0,
+        "parameter_count": 0,
+        "sample_nloc": 0,
+        "total_operands": 0,
+        "total_operators": 0
+      },
+      "sample_rows": 198180,
+      "semgrep": {
+        "error_functions": 3789,
+        "sampled_error_functions": 1513,
+        "scanned": 202725
+      }
+    },
+    "human": {
+      "complexity_dropped_full": 856,
+      "complexity_retained_full": 220940,
+      "complexity_source": {
+        "aggregate_rows": 221796,
+        "functions_computable": 232625,
+        "functions_detected": 232828,
+        "functions_dropped": 203,
+        "samples_without_computable_functions": 856
+      },
+      "defect_source_rows": 150087,
+      "entropy_own_author_rows": 221796,
+      "outcome_zero_counts": {
+        "def_algorithm": 185259,
+        "def_assignment": 200262,
+        "def_checking": 190544,
+        "def_function_class_object": 215067,
+        "def_interface": 219843,
+        "def_timing": 212873,
+        "defects_total": 144966,
+        "vulns_high_sev": 220277,
+        "vulns_total": 214268
+      },
+      "predictor_nulls": {
+        "ccn": 0,
+        "distinct_operands": 0,
+        "distinct_operators": 0,
+        "halstead_difficulty": 0,
+        "halstead_effort": 0,
+        "halstead_v": 0,
+        "max_nesting_depth": 0,
+        "mi": 0,
+        "naturalness": 0,
+        "nloc": 0,
+        "parameter_count": 0,
+        "sample_nloc": 0,
+        "total_operands": 0,
+        "total_operators": 0
+      },
+      "sample_rows": 220940,
+      "semgrep": {
+        "error_functions": 228,
+        "sampled_error_functions": 189,
+        "scanned": 221796
+      }
+    },
+    "qwen": {
+      "complexity_dropped_full": 4742,
+      "complexity_retained_full": 217054,
+      "complexity_source": {
+        "aggregate_rows": 221796,
+        "functions_computable": 304277,
+        "functions_detected": 304481,
+        "functions_dropped": 204,
+        "samples_without_computable_functions": 4742
+      },
+      "defect_source_rows": 125887,
+      "entropy_own_author_rows": 221796,
+      "outcome_zero_counts": {
+        "def_algorithm": 199988,
+        "def_assignment": 197285,
+        "def_checking": 196413,
+        "def_function_class_object": 209066,
+        "def_interface": 216263,
+        "def_timing": 211971,
+        "defects_total": 156798,
+        "vulns_high_sev": 215848,
+        "vulns_total": 203455
+      },
+      "predictor_nulls": {
+        "ccn": 0,
+        "distinct_operands": 0,
+        "distinct_operators": 0,
+        "halstead_difficulty": 0,
+        "halstead_effort": 0,
+        "halstead_v": 0,
+        "max_nesting_depth": 0,
+        "mi": 0,
+        "naturalness": 0,
+        "nloc": 0,
+        "parameter_count": 0,
+        "sample_nloc": 0,
+        "total_operands": 0,
+        "total_operators": 0
+      },
+      "sample_rows": 217054,
+      "semgrep": {
+        "error_functions": 478,
+        "sampled_error_functions": 446,
+        "scanned": 218587
+      }
+    }
+  },
+  "dataset_rows": 221796,
+  "language": "java",
+  "sample_per_author": 0,
+  "seed": 20250701
+}
