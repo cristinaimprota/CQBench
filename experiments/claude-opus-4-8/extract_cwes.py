@@ -2,10 +2,13 @@
 Semgrep result files, using the benchmark's own loader (legacy.load_raw_vulnerabilities
 + cwes_from_raw). Config paths are rewritten from the export ROOT to the parent repo
 where the actual risultati_*/C_security data lives."""
-import dataclasses, json, collections, os
+import dataclasses, json, collections, os, sys
 from pathlib import Path
 
-os.chdir("/home/cristina01/humanAIcodesmells/CQBench-v1-export")
+B = Path(__file__).resolve().parent            # this experiment directory
+REPO = B.parents[1]                            # repository root
+sys.path.insert(0, str(REPO))
+os.chdir(REPO)
 import cqbench.legacy as L
 
 m = L.rq4_module()
@@ -31,8 +34,7 @@ for lang, cfg in list(m.LANGUAGE_CONFIGS.items()):
             changes[f.name] = remap(v)
     m.LANGUAGE_CONFIGS[lang] = dataclasses.replace(cfg, **changes)
 
-# subset source_ids by language
-B = Path("/tmp/claude-1002/-home-cristina01-humanAIcodesmells/4bdfd546-2b10-4bda-baec-95e09396810c/scratchpad/bench")
+# subset source_ids by language (files sit next to this script)
 tasks = [json.loads(l) for l in open(B / "subset_tasks.jsonl")]
 by_lang = collections.defaultdict(list)
 for t in tasks:

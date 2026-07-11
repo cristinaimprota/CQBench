@@ -29,7 +29,7 @@ sample of all programming tasks.
 ## Package layout
 
 ```text
-CQBench-v1-export/
+CQBench/
 ├── benchmark/
 │   ├── tasks.jsonl
 │   ├── references.jsonl
@@ -68,7 +68,7 @@ GPT-OSS for C, matching the study convention.
 ## Validate the package
 
 ```bash
-conda run -n labgpuenv python -m cqbench audit-large \
+python -m cqbench audit-large \
   --benchmark-dir benchmark
 
 sha256sum -c MANIFEST.sha256

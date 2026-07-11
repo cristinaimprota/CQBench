@@ -1,12 +1,15 @@
 """Pick representative Claude generations that triggered defects / CWEs, and
 reproduce the exact findings with the benchmark's own analyzers."""
-import json, os
+import json, os, sys
 from pathlib import Path
-os.chdir("/home/cristina01/humanAIcodesmells/CQBench-v1-export")
+
+B = Path(__file__).resolve().parent            # this experiment directory
+REPO = B.parents[1]                            # repository root (…/experiments/<run>/ -> repo)
+sys.path.insert(0, str(REPO))
+os.chdir(REPO)
 from cqbench.analyzers import analyze_defects, analyze_semgrep
 from cqbench.config import ROOT
 
-B = Path("/tmp/claude-1002/-home-cristina01-humanAIcodesmells/4bdfd546-2b10-4bda-baec-95e09396810c/scratchpad/bench")
 RULES = ROOT / "cqbench/rules/semgrep.json"
 results = {json.loads(l)["task_id"]: json.loads(l) for l in open(B/"results.jsonl")}
 code = {json.loads(l)["task_id"]: json.loads(l)["code"] for l in open(B/"predictions.jsonl")}
@@ -79,7 +82,6 @@ for tid,note in chosen:
         print(f"  vulns_total={vv['vulns_total']} cwes={vv['cwes']}")
     out.append("")
 
-Path(B/"EXAMPLES.md").write_text("\n".join(out), encoding="utf-8")
-dest=Path("/home/cristina01/humanAIcodesmells/CQBench-v1-export/runs/claude-opus-4-8/EXAMPLES_defects_cwes.md")
+dest = B / "EXAMPLES_defects_cwes.md"
 dest.write_text("\n".join(out), encoding="utf-8")
 print("\nwrote EXAMPLES to", dest)

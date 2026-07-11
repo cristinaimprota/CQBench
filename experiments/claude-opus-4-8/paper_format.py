@@ -8,8 +8,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-B = Path("/tmp/claude-1002/-home-cristina01-humanAIcodesmells/4bdfd546-2b10-4bda-baec-95e09396810c/scratchpad/bench")
-OUT = Path("/home/cristina01/humanAIcodesmells/CQBench-v1-export/runs/claude-opus-4-8/paper_figures")
+B = Path(__file__).resolve().parent            # this experiment directory
+OUT = B / "paper_figures"
 OUT.mkdir(parents=True, exist_ok=True)
 
 AUTH_FILES = {"Human": B/"baselines/human.jsonl", "OpenAI GPT": B/"baselines/openai.jsonl",

@@ -6,9 +6,9 @@ no progress. This wrapper splits the submission into shards, evaluates each with
 the real evaluator (identical results), and prints a bar with elapsed time / ETA.
 Shard outputs are concatenated back in the original task order.
 
-Usage (from the CQBench-v1-export directory, in the analysis env):
+Usage (from the repository root):
 
-  conda run -n labgpuenv python tools/evaluate_with_progress.py \
+  python tools/evaluate_with_progress.py \
     --tasks runs/claude-opus-4-8/subset_tasks.jsonl \
     --references runs/claude-opus-4-8/subset_refs.jsonl \
     --predictions runs/claude-opus-4-8/predictions.jsonl \

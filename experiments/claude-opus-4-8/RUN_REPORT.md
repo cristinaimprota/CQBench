@@ -127,7 +127,5 @@ Full per-language breakdown in `runs/claude-opus-4-8/cwe_distribution.csv`
 - Static analysis only — no execution, no functional-correctness check; analyzer findings
   include false positives.
 - The AI baselines were selected as failure-prone, biasing the Claude-vs-baseline gap upward.
-- One benchmark data-quality issue: task `java:gj226758` has a corrupted signature
-  (extracted from a stray log line), so its arity gate is not meaningful.
 - CWE cross-author figures come from the raw Semgrep findings (the packaged historical
   *results* files carry no CWE detail); ODC defect figures come from the frozen study tables.

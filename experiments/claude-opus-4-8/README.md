@@ -30,7 +30,7 @@ part of the benchmark itself.
 ## Reproduce the scoring
 ```bash
 # from the repository root
-conda run -n labgpuenv python -m cqbench evaluate \
+python -m cqbench evaluate \
   --tasks experiments/claude-opus-4-8/subset_tasks.jsonl \
   --references experiments/claude-opus-4-8/subset_refs.jsonl \
   --predictions experiments/claude-opus-4-8/predictions.jsonl \

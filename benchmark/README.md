@@ -34,7 +34,7 @@ counts are recorded in `manifest.json`.
 Validate a model's JSONL predictions before running analyzers:
 
 ```bash
-conda run -n labgpuenv python -m cqbench validate-submission \
+python -m cqbench validate-submission \
   --tasks cqbench_data/v1/benchmark/tasks.jsonl \
   --predictions predictions.jsonl
 ```
@@ -46,7 +46,7 @@ study findings and metrics through explicit `(source_id, author)` keys.
 Compare a new evaluated result file with the baselines:
 
 ```bash
-conda run -n labgpuenv python -m cqbench compare \
+python -m cqbench compare \
   --submission my-results.jsonl \
   --baseline cqbench_data/v1/benchmark/results/openai.jsonl \
   --baseline cqbench_data/v1/benchmark/results/dsc.jsonl \

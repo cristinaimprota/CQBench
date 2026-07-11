@@ -41,12 +41,12 @@
     "references": {
       "path": "references.jsonl",
       "rows": 27346,
-      "sha256": "df68ce8a924de97fc924e57557233d45b222864072b755230f63233bed8f8763"
+      "sha256": "438a8aad5e308c23dea356f46602ab80750e37436b866208918ab91c8e3bf0bd"
     },
     "tasks": {
       "path": "tasks.jsonl",
       "rows": 27346,
-      "sha256": "07ea0d2e691a91c76520a07d64c1479e1032751fa39f53c2d70a2d2dc004ad6c"
+      "sha256": "0f2f733b7449ae03ed6897903b4e43c15efb9b78a708888a14312669da4b0780"
     }
   },
   "benchmark_version": "cqbench-v1",
