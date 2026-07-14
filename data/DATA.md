@@ -25,17 +25,6 @@ on Zenodo rather than in git.
 - The dataset is required only to **re-derive** the benchmark or reproduce the
   study's selection/aggregation.
 
-## Re-deriving the benchmark
-
-The per-function metric / defect / vulnerability tables used for task selection
-(the `*_rq4_table.parquet` files consumed by `support/rq4_build_table.py`) are
-**not** published as artifacts — they are **rebuilt from the dataset** by the
-study pipeline in [`replication/`](../replication/README.md) (complexity metrics,
-the analyzer runs, and `rq4_build_table.py`). Re-derivation therefore needs the
-dataset above plus the analyzer toolchain (pylint 3.3.6, PMD 7.11.0, clang-tidy
-18, Semgrep 1.120.0); it does not depend on any pre-built parquet from the
-deposit.
-
 ## Download
 
 ```bash
@@ -45,6 +34,3 @@ mkdir -p datasets
 # https://doi.org/10.5281/zenodo.21282648 into datasets/, then verify against
 # the checksums published on the Zenodo record.
 ```
-
-The dataset files are intentionally **not** tracked by git or listed in this
-repository's `MANIFEST.sha256`; their integrity is covered by the Zenodo record.
