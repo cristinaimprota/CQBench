@@ -1,12 +1,10 @@
-Did you change the total size of the dataset?
-📊 Statistiche PMD + ODC
+PMD + ODC statistics
 ────────────────────────────
-🔢 Numero totale di difetti (ODC != --): 123180
-🔣 Numero di file UNICI difettosi: 60389 (27.23%)
-➗ Numero medio di difetti per file difettoso: 2.04
-🧨 File unici con ParseException: 624
+Total number of defects (ODC != --): 123180
+Unique defective files: 60389 (27.23%)
+Average defects per defective file: 2.04
 
-📂 Difetti per categoria ODC:
+Defects per ODC category:
   - Assignment: 36100
   - Checking: 34015
   - Algorithm: 33380
@@ -14,7 +12,7 @@ Did you change the total size of the dataset?
   - Timing: 7392
   - Interface: 949
 
-🔍 Difetti più frequenti (regole PMD):
+Most frequent defects (PMD rules):
   - UnusedFormalParameter: 24660
   - SystemPrintln: 13329
   - UseVarargs: 5826
@@ -26,16 +24,16 @@ Did you change the total size of the dataset?
   - LiteralsFirstInComparisons: 3939
   - AvoidCatchingGenericException: 3938
 
-📌 Distribuzione #categorie ODC per file:
-  - 50434 file con 1 categorie ODC distinte
-  - 8877 file con 2 categorie ODC distinte
-  - 1017 file con 3 categorie ODC distinte
-  - 60 file con 4 categorie ODC distinte
-  - 1 file con 5 categorie ODC distinte
+Distribution of #distinct ODC categories per file:
+  - 50434 files with 1 distinct ODC categories
+  - 8877 files with 2 distinct ODC categories
+  - 1017 files with 3 distinct ODC categories
+  - 60 files with 4 distinct ODC categories
+  - 1 files with 5 distinct ODC categories
 
-📚 Distribuzione delle regole PMD per ciascuna categoria ODC:
+Distribution of PMD rules per ODC category:
 
-🔸 Checking (34015 difetti totali)
+Checking (34015 total defects)
    • SystemPrintln: 13329
    • SignatureDeclareThrowsException: 5113
    • AvoidThrowingRawExceptionTypes: 4237
@@ -56,7 +54,7 @@ Did you change the total size of the dataset?
    • ReturnFromFinallyBlock: 4
    • InvalidLogMessageFormat: 1
 
-🔸 Function/Class/Object (11344 difetti totali)
+Function/Class/Object (11344 total defects)
    • UseVarargs: 5826
    • ImmutableField: 2546
    • UseObjectForClearerAPI: 736
@@ -90,7 +88,7 @@ Did you change the total size of the dataset?
    • EmptyFinalizer: 1
    • ProperCloneImplementation: 1
 
-🔸 Algorithm (33380 difetti totali)
+Algorithm (33380 total defects)
    • AppendCharacterWithChar: 5715
    • AvoidInstantiatingObjectsInLoops: 5577
    • LiteralsFirstInComparisons: 3939
@@ -148,7 +146,7 @@ Did you change the total size of the dataset?
    • MisplacedNullCheck: 1
    • InstantiationToGetClass: 1
 
-🔸 Timing (7392 difetti totali)
+Timing (7392 total defects)
    • AvoidSynchronizedAtMethodLevel: 4049
    • DoNotUseThreads: 2605
    • AvoidSynchronizedStatement: 680
@@ -159,7 +157,7 @@ Did you change the total size of the dataset?
    • AvoidUsingVolatile: 6
    • NonThreadSafeSingleton: 1
 
-🔸 Assignment (36100 difetti totali)
+Assignment (36100 total defects)
    • UnusedFormalParameter: 24660
    • AssignmentInOperand: 3078
    • AvoidReassigningParameters: 2664
@@ -172,7 +170,7 @@ Did you change the total size of the dataset?
    • AvoidStringBufferField: 5
    • AssignmentToNonFinalStatic: 1
 
-🔸 Interface (949 difetti totali)
+Interface (949 total defects)
    • CloseResource: 388
    • AvoidUsingHardCodedIP: 287
    • UseProperClassLoader: 266
@@ -180,20 +178,18 @@ Did you change the total size of the dataset?
    • AvoidFileStream: 2
    • DoNotHardCodeSDCard: 2
 
-🚨 Errori di elaborazione PMD
+Errori di elaborazione PMD
 ────────────────────────────
-❌ Totale processingErrors: 3537 (1.59%)
+Totale processingErrors: 3537 (1.59%)
 
-📌 Tipi di eccezioni incontrate:
-  - ParseException: 3120
+Tipi di eccezioni incontrate:
   - LexException: 245
   - ContextedRuntimeException: 147
   - SemanticException: 20
   - MalformedSourceException: 5
 
-🧨 File unici con ParseException: 624
 
-📶 Distribuzione delle priorità (severity):
+Distribution by priority (severity):
   - Priority 1: 6077
   - Priority 2: 17343
   - Priority 3: 227607

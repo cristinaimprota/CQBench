@@ -1,17 +1,17 @@
-📊 Statistiche pylint + ODC
+Pylint + ODC statistics
 ────────────────────────────
-🔢 Numero totale di difetti (ODC != --): 429247
-🔣 Numero di istanze UNICHE difettose: 158221 (55.47%)
-➗ Numero medio di difetti per istanza: 2.71
+Total number of defects (ODC != --): 429247
+Unique defective instances: 158221 (55.47%)
+Average defects per instance: 2.71
 
-📂 Difetti per categoria ODC:
+Defects per ODC category:
   - Interface: 243492
   - Algorithm: 88769
   - Assignment: 63282
   - Checking: 29561
   - Function/Class/Object: 4143
 
-🔍 Difetti più frequenti (simboli pylint):
+Most frequent defects (pylint symbols):
   - protected-access: 202259
   - unused-argument: 26587
   - no-else-return: 22619
@@ -23,16 +23,16 @@
   - unspecified-encoding: 8021
   - redefined-builtin: 7960
 
-📌 Distribuzione #categorie ODC per istanza:
-  - 111743 istanze con 1 categorie ODC distinte
-  - 35817 istanze con 2 categorie ODC distinte
-  - 9187 istanze con 3 categorie ODC distinte
-  - 1440 istanze con 4 categorie ODC distinte
-  - 34 istanze con 5 categorie ODC distinte
+Distribution of #distinct ODC categories per instance:
+  - 111743 instances with 1 distinct ODC categories
+  - 35817 instances with 2 distinct ODC categories
+  - 9187 instances with 3 distinct ODC categories
+  - 1440 instances with 4 distinct ODC categories
+  - 34 instances with 5 distinct ODC categories
 
-📚 Distribuzione dei simboli per ciascuna categoria ODC:
+Distribution of symbols per ODC category:
 
-🔸 Algorithm (88769 difetti totali)
+Algorithm (88769 total defects)
    • no-else-return: 22619
    • multiple-statements: 7617
    • inconsistent-return-statements: 7165
@@ -114,7 +114,7 @@
    • assert-on-string-literal: 1
    • bad-str-strip-call: 1
 
-🔸 Interface (243492 difetti totali)
+Interface (243492 total defects)
    • protected-access: 202259
    • too-many-arguments: 9269
    • too-many-positional-arguments: 9196
@@ -178,7 +178,7 @@
    • confusing-with-statement: 1
    • subprocess-popen-preexec-fn: 1
 
-🔸 Assignment (63282 difetti totali)
+Assignment (63282 total defects)
    • unused-argument: 26587
    • unused-variable: 13241
    • too-many-locals: 8275
@@ -204,7 +204,7 @@
    • access-member-before-definition: 1
    • mixed-format-string: 1
 
-🔸 Checking (29561 difetti totali)
+Checking (29561 total defects)
    • raise-missing-from: 10108
    • broad-exception-caught: 5581
    • broad-exception-raised: 4017
@@ -224,7 +224,7 @@
    • subprocess-run-check: 2
    • bad-except-order: 1
 
-🔸 Function/Class/Object (4143 difetti totali)
+Function/Class/Object (4143 total defects)
    • redefined-outer-name: 3440
    • too-few-public-methods: 446
    • useless-object-inheritance: 148

@@ -1,17 +1,17 @@
-📊 Statistiche pylint + ODC
+Pylint + ODC statistics
 ────────────────────────────
-🔢 Numero totale di difetti (ODC != --): 574916
-🔣 Numero di istanze UNICHE difettose: 178225 (62.48%)
-➗ Numero medio di difetti per istanza: 3.23
+Total number of defects (ODC != --): 574916
+Unique defective instances: 178225 (62.48%)
+Average defects per instance: 3.23
 
-📂 Difetti per categoria ODC:
+Defects per ODC category:
   - Assignment: 249108
   - Interface: 142927
   - Algorithm: 87528
   - Function/Class/Object: 72501
   - Checking: 22852
 
-🔍 Difetti più frequenti (simboli pylint):
+Most frequent defects (pylint symbols):
   - unused-argument: 213264
   - protected-access: 105770
   - redefined-outer-name: 57252
@@ -23,16 +23,16 @@
   - redefined-builtin: 8365
   - raise-missing-from: 6348
 
-📌 Distribuzione #categorie ODC per istanza:
-  - 119087 istanze con 1 categorie ODC distinte
-  - 46196 istanze con 2 categorie ODC distinte
-  - 11562 istanze con 3 categorie ODC distinte
-  - 1328 istanze con 4 categorie ODC distinte
-  - 52 istanze con 5 categorie ODC distinte
+Distribution of #distinct ODC categories per instance:
+  - 119087 instances with 1 distinct ODC categories
+  - 46196 instances with 2 distinct ODC categories
+  - 11562 instances with 3 distinct ODC categories
+  - 1328 instances with 4 distinct ODC categories
+  - 52 instances with 5 distinct ODC categories
 
-📚 Distribuzione dei simboli per ciascuna categoria ODC:
+Distribution of symbols per ODC category:
 
-🔸 Algorithm (87528 difetti totali)
+Algorithm (87528 total defects)
    • no-else-return: 34938
    • unnecessary-pass: 31081
    • inconsistent-return-statements: 3095
@@ -107,7 +107,7 @@
    • unnecessary-ellipsis: 1
    • consider-swap-variables: 1
 
-🔸 Assignment (249108 difetti totali)
+Assignment (249108 total defects)
    • unused-argument: 213264
    • unused-variable: 22749
    • redefined-builtin: 8365
@@ -134,7 +134,7 @@
    • nonlocal-without-binding: 1
    • self-cls-assignment: 1
 
-🔸 Interface (142927 difetti totali)
+Interface (142927 total defects)
    • protected-access: 105770
    • unspecified-encoding: 15280
    • too-many-arguments: 6107
@@ -191,7 +191,7 @@
    • nonexistent-operator: 1
    • logging-not-lazy: 1
 
-🔸 Function/Class/Object (72501 difetti totali)
+Function/Class/Object (72501 total defects)
    • redefined-outer-name: 57252
    • too-few-public-methods: 10182
    • function-redefined: 4572
@@ -214,7 +214,7 @@
    • invalid-metaclass: 1
    • bad-staticmethod-argument: 1
 
-🔸 Checking (22852 difetti totali)
+Checking (22852 total defects)
    • raise-missing-from: 6348
    • broad-exception-caught: 6188
    • broad-exception-raised: 3214

@@ -1,13 +1,10 @@
-Did you change the total size of the dataset?
-📊 Statistiche PMD + ODC
+PMD + ODC statistics
 ────────────────────────────
-📂 Numero totale di file vuoti: 19070 (8.60%)
-🔢 Numero totale di difetti (ODC != --): 242437
-🔣 Numero di file UNICI difettosi: 155077 (69.92%)
-➗ Numero medio di difetti per file difettoso: 1.56
-🧨 File unici con ParseException: 15311 (6.90%)
+Total number of defects (ODC != --): 242437
+Unique defective files: 155077 (69.92%)
+Average defects per defective file: 1.56
 
-📂 Difetti per categoria ODC:
+Defects per ODC category:
   - Function/Class/Object: 79724
   - Checking: 74252
   - Algorithm: 29023
@@ -15,7 +12,7 @@ Did you change the total size of the dataset?
   - Timing: 16017
   - Interface: 14401
 
-🔍 Difetti più frequenti (regole PMD):
+Most frequent defects (PMD rules):
   - ImmutableField: 41669
   - SystemPrintln: 37986
   - UnusedPrivateField: 15793
@@ -27,16 +24,16 @@ Did you change the total size of the dataset?
   - UseConcurrentHashMap: 6580
   - LooseCoupling: 6159
 
-📌 Distribuzione #categorie ODC per file:
-  - 138690 file con 1 categorie ODC distinte
-  - 15164 file con 2 categorie ODC distinte
-  - 1158 file con 3 categorie ODC distinte
-  - 64 file con 4 categorie ODC distinte
-  - 1 file con 5 categorie ODC distinte
+Distribution of #distinct ODC categories per file:
+  - 138690 files with 1 distinct ODC categories
+  - 15164 files with 2 distinct ODC categories
+  - 1158 files with 3 distinct ODC categories
+  - 64 files with 4 distinct ODC categories
+  - 1 files with 5 distinct ODC categories
 
-📚 Distribuzione delle regole PMD per ciascuna categoria ODC:
+Distribution of PMD rules per ODC category:
 
-🔸 Function/Class/Object (79724 difetti totali)
+Function/Class/Object (79724 total defects)
    • ImmutableField: 41669
    • UnusedPrivateField: 15793
    • LooseCoupling: 6159
@@ -77,7 +74,7 @@ Did you change the total size of the dataset?
    • NonStaticInitializer: 1
    • FinalizeShouldBeProtected: 1
 
-🔸 Checking (74252 difetti totali)
+Checking (74252 total defects)
    • SystemPrintln: 37986
    • AvoidPrintStackTrace: 14267
    • AvoidCatchingGenericException: 7392
@@ -100,7 +97,7 @@ Did you change the total size of the dataset?
    • AvoidCatchingNPE: 5
    • ReturnFromFinallyBlock: 2
 
-🔸 Algorithm (29023 difetti totali)
+Algorithm (29023 total defects)
    • LiteralsFirstInComparisons: 4303
    • AvoidInstantiatingObjectsInLoops: 4080
    • AppendCharacterWithChar: 3818
@@ -171,7 +168,7 @@ Did you change the total size of the dataset?
    • NonCaseLabelInSwitch: 1
    • EqualsNull: 1
 
-🔸 Timing (16017 difetti totali)
+Timing (16017 total defects)
    • UseConcurrentHashMap: 6580
    • DoNotUseThreads: 5979
    • AvoidSynchronizedAtMethodLevel: 2658
@@ -183,7 +180,7 @@ Did you change the total size of the dataset?
    • DoubleCheckedLocking: 11
    • UnsynchronizedStaticFormatter: 1
 
-🔸 Assignment (29020 difetti totali)
+Assignment (29020 total defects)
    • UnusedFormalParameter: 8910
    • UnusedLocalVariable: 8518
    • AssignmentInOperand: 3201
@@ -197,7 +194,7 @@ Did you change the total size of the dataset?
    • AvoidMessageDigestField: 17
    • AssignmentToNonFinalStatic: 14
 
-🔸 Interface (14401 difetti totali)
+Interface (14401 total defects)
    • CloseResource: 8404
    • AvoidFileStream: 4421
    • SimpleDateFormatNeedsLocale: 616
@@ -209,20 +206,18 @@ Did you change the total size of the dataset?
    • UseIOStreamsWithApacheCommonsFileItem: 11
    • DoNotHardCodeSDCard: 2
 
-🚨 Errori di elaborazione PMD
+Errori di elaborazione PMD
 ────────────────────────────
-❌ Totale processingErrors: 26509 (11.95%)
+Totale processingErrors: 26509 (11.95%)
 
-📌 Tipi di eccezioni incontrate:
-  - ParseException: 25801
+Tipi di eccezioni incontrate:
   - SemanticException: 270
   - LexException: 195
   - ContextedRuntimeException: 168
   - NumberFormatException: 5
 
-🧨 File unici con ParseException: 15311
 
-📶 Distribuzione delle priorità (severity):
+Distribution by priority (severity):
   - Priority 1: 12119
   - Priority 2: 41417
   - Priority 3: 293996

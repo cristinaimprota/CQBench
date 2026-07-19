@@ -1,12 +1,10 @@
-Did you change the total size of the dataset?
-📊 Statistiche PMD + ODC
+PMD + ODC statistics
 ────────────────────────────
-🔢 Numero totale di difetti (ODC != --): 161056
-🔣 Numero di file UNICI difettosi: 78241 (35.28%)
-➗ Numero medio di difetti per file difettoso: 2.06
-🧨 File unici con ParseException: 2056 (0.93%)
+Total number of defects (ODC != --): 161056
+Unique defective files: 78241 (35.28%)
+Average defects per defective file: 2.06
 
-📂 Difetti per categoria ODC:
+Defects per ODC category:
   - Algorithm: 51688
   - Checking: 43411
   - Assignment: 30234
@@ -14,7 +12,7 @@ Did you change the total size of the dataset?
   - Interface: 7725
   - Timing: 6780
 
-🔍 Difetti più frequenti (regole PMD):
+Most frequent defects (PMD rules):
   - SystemPrintln: 10428
   - AvoidInstantiatingObjectsInLoops: 9430
   - UseVarargs: 9124
@@ -26,17 +24,17 @@ Did you change the total size of the dataset?
   - UnusedAssignment: 5456
   - CyclomaticComplexity: 4594
 
-📌 Distribuzione #categorie ODC per file:
-  - 60524 file con 1 categorie ODC distinte
-  - 14226 file con 2 categorie ODC distinte
-  - 2953 file con 3 categorie ODC distinte
-  - 480 file con 4 categorie ODC distinte
-  - 56 file con 5 categorie ODC distinte
-  - 2 file con 6 categorie ODC distinte
+Distribution of #distinct ODC categories per file:
+  - 60524 files with 1 distinct ODC categories
+  - 14226 files with 2 distinct ODC categories
+  - 2953 files with 3 distinct ODC categories
+  - 480 files with 4 distinct ODC categories
+  - 56 files with 5 distinct ODC categories
+  - 2 files with 6 distinct ODC categories
 
-📚 Distribuzione delle regole PMD per ciascuna categoria ODC:
+Distribution of PMD rules per ODC category:
 
-🔸 Checking (43411 difetti totali)
+Checking (43411 total defects)
    • SystemPrintln: 10428
    • AvoidCatchingGenericException: 6738
    • SignatureDeclareThrowsException: 4486
@@ -57,7 +55,7 @@ Did you change the total size of the dataset?
    • InvalidLogMessageFormat: 11
    • ReturnFromFinallyBlock: 8
 
-🔸 Algorithm (51688 difetti totali)
+Algorithm (51688 total defects)
    • AvoidInstantiatingObjectsInLoops: 9430
    • LiteralsFirstInComparisons: 7970
    • AppendCharacterWithChar: 5473
@@ -132,7 +130,7 @@ Did you change the total size of the dataset?
    • UnitTestContainsTooManyAsserts: 1
    • BigIntegerInstantiation: 1
 
-🔸 Function/Class/Object (21218 difetti totali)
+Function/Class/Object (21218 total defects)
    • UseVarargs: 9124
    • ImmutableField: 4534
    • UnusedPrivateField: 2814
@@ -176,7 +174,7 @@ Did you change the total size of the dataset?
    • CallSuperLast: 1
    • FinalizeOverloaded: 1
 
-🔸 Interface (7725 difetti totali)
+Interface (7725 total defects)
    • CloseResource: 4252
    • AvoidFileStream: 2154
    • UseProperClassLoader: 737
@@ -189,7 +187,7 @@ Did you change the total size of the dataset?
    • UseIOStreamsWithApacheCommonsFileItem: 2
    • DoNotHardCodeSDCard: 2
 
-🔸 Timing (6780 difetti totali)
+Timing (6780 total defects)
    • DoNotUseThreads: 3625
    • UseConcurrentHashMap: 1110
    • AvoidSynchronizedAtMethodLevel: 881
@@ -201,7 +199,7 @@ Did you change the total size of the dataset?
    • DoubleCheckedLocking: 35
    • UnsynchronizedStaticFormatter: 4
 
-🔸 Assignment (30234 difetti totali)
+Assignment (30234 total defects)
    • UnusedLocalVariable: 6965
    • UnusedFormalParameter: 6162
    • UnusedAssignment: 5456
@@ -216,20 +214,18 @@ Did you change the total size of the dataset?
    • AvoidMessageDigestField: 2
    • AvoidReassigningCatchVariables: 1
 
-🚨 Errori di elaborazione PMD
+Errori di elaborazione PMD
 ────────────────────────────
-❌ Totale processingErrors: 10919 (4.92%)
+Totale processingErrors: 10919 (4.92%)
 
-📌 Tipi di eccezioni incontrate:
-  - ParseException: 10280
+Tipi di eccezioni incontrate:
   - ContextedRuntimeException: 269
   - LexException: 225
   - SemanticException: 135
   - MalformedSourceException: 10
 
-🧨 File unici con ParseException: 2056
 
-📶 Distribuzione delle priorità (severity):
+Distribution by priority (severity):
   - Priority 1: 9108
   - Priority 2: 15546
   - Priority 3: 215869

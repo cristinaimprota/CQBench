@@ -1,29 +1,22 @@
 # CQBench v1
 
-CQBench is a 27,346-task static code-quality challenge benchmark for Python,
-Java, and C. It evaluates whether generated code is structurally complete,
-non-degenerate relative to a human reference, and free from analyzer-detected
-defects and vulnerability patterns.
+CQBench is a 27,346-task static code-quality challenge benchmark for Python, Java, and C. It evaluates whether generated code is structurally complete, non-degenerate relative to a human reference, and free from defects and vulnerability patterns.
 
-CQBench does not execute code and does not measure functional correctness or
-exploitability. It is a failure-derived stress benchmark, not a representative
-sample of all programming tasks.
+CQBench does not execute code and does not measure functional correctness or exploitability. It is a failure-derived stress benchmark, not a representative sample of all programming tasks.
 
 ## Contents
 
 - `benchmark/tasks.jsonl`: 27,346 prompts and public task metadata.
 - `benchmark/references.jsonl`: human structural and complexity references.
-- `benchmark/baselines/`: historical Human, OpenAI, DeepSeek, and Qwen code.
-- `benchmark/results/`: keyed historical evaluation results.
+- `benchmark/baselines/`: baseline Human, OpenAI, DeepSeek, and Qwen code.
+- `benchmark/results/`: keyed baseline evaluation results.
 - `cqbench/`: evaluator, reporting, and audit implementation.
 - `cqbench/rules/`: frozen Semgrep rules and rule manifest.
 - `mappings/`: language-organized analyzer-to-ODC mappings.
-- `replication/`: study scripts (metrics, naturalness) and result summaries for
-  transparency; see `replication/README.md`.
+- `replication/`: study scripts (naturalness) and result summaries for transparency; see `replication/README.md`.
 - `experiments/`: worked example evaluations (e.g. `claude-opus-4-8/`).
 - `data/DATA.md`: pointer to the full dataset (hosted on Zenodo).
 - `Dockerfile`: pinned container environment.
-- `MANIFEST.sha256`: integrity hashes for exported files.
 
 ## Package layout
 
@@ -43,7 +36,7 @@ CQBench/
 ├── data/
 │   └── DATA.md
 ├── replication/
-│   ├── scripts/       (metrics, naturalness)
+│   ├── scripts/       (naturalness)
 │   ├── results/       (rq1–rq4)
 │   └── calibration/   (§4.2 model consistency)
 ├── experiments/
@@ -52,21 +45,12 @@ CQBench/
 ├── tests/
 ├── tools/
 ├── Dockerfile
-├── pyproject.toml
-└── MANIFEST.sha256
+└── pyproject.toml
 ```
 
-`support/` contains compatibility modules because the evaluator imports the
-exact metric and exclusion definitions used in the study.
+`support/` contains compatibility modules because the evaluator imports the exact metric and exclusion definitions used in the study.
 
-The unified `openai.jsonl` baseline uses ChatGPT for Python and Java and
-GPT-OSS for C, matching the study convention.
-
-## Validate the package
-
-```bash
-sha256sum -c MANIFEST.sha256
-```
+The unified `openai.jsonl` baseline uses ChatGPT for Python and Java and GPT-OSS for C, matching the study convention.
 
 ## Native setup
 
@@ -118,20 +102,13 @@ python -m cqbench validate-submission \
   --predictions predictions.jsonl
 ```
 
-Missing predictions remain part of the denominator and are evaluated as empty
-outputs. Unknown and duplicate task IDs fail validation.
+Missing predictions remain part of the denominator and are evaluated as empty outputs. Unknown and duplicate task IDs fail validation.
 
 ## Scores
 
-The principal endpoint is `clean_strict_at_1`: the generated target must be
-parseable, present with the expected arity, non-stub, non-constant,
-structurally nontrivial, complexity-nondegenerate, and have zero included
-defect and vulnerability findings.
+The principal endpoint is `clean_strict_at_1`: the generated target must be parseable, present with the expected arity, non-stub, non-constant, structurally nontrivial, complexity-nondegenerate, and have zero included defect and vulnerability findings.
 
-Supporting measures include submission, parseability, target-presence,
-non-stub and strict-nontrivial rates; defect-, vulnerability-, and
-high-severity-free rates; ODC incidence; and structural complexity summaries.
-`Critical` and `Error` Semgrep findings are high severity.
+Supporting measures include submission, parseability, target-presence, non-stub and strict-nontrivial rates; defect-, vulnerability-, and high-severity-free rates; ODC incidence; and structural complexity summaries. `Critical` and `Error` Semgrep findings are high severity.
 
 Generate a report:
 
@@ -142,8 +119,7 @@ python -m cqbench report \
   --output-dir reports/my-model
 ```
 
-Compare it with historical baselines using paired, seeded 10,000-resample
-bootstrap intervals:
+Compare it with baselines using paired, seeded 10,000-resample bootstrap intervals:
 
 ```bash
 python -m cqbench compare \
@@ -154,20 +130,10 @@ python -m cqbench compare \
   --output comparison.csv
 ```
 
-No p-values are reported.
-
 ## Dataset
 
-The benchmark tasks, references, baselines, and results in `benchmark/` are
-self-contained. The full source dataset — the ⟨docstring, human-code,
-LLM-code⟩ tuples and per-function metric tables the tasks are derived from — is
-hosted on Zenodo (it is too large to ship in this repository). See
-[`data/DATA.md`](data/DATA.md) for the DOI, contents, checksums, and where to
-place each file.
+The benchmark tasks, references, baselines, and results in `benchmark/` are self-contained. The full source dataset — the ⟨docstring, human-code, LLM-code⟩ tuples and per-function metric tables the tasks are derived from — is hosted on Zenodo (it is too large to ship in this repository). See [`data/DATA.md`](data/DATA.md) for the DOI, contents, checksums, and where to place each file.
 
 ## Interpretation constraint
 
-Tasks were selected because at least two historical model outputs passed the
-complexity gate, had at least three included findings, and shared an ODC type
-or normalized CWE. This enriches failures by design. Results support claims
-about robustness on known issue-prone tasks, not population-wide model quality.
+Tasks were selected because at least two historical model outputs passed the complexity gate, had at least three included findings, and shared an ODC type or normalized CWE. This enriches failures by design. Results support claims about robustness on known issue-prone tasks, not population-wide model quality.

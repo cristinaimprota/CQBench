@@ -1,16 +1,19 @@
 #!/bin/bash
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../../.." && pwd)"
+
 # ===============================
 # CONFIGURATION (edit these only)
 # ===============================
-PYTHON_SCRIPT="../code/llm_kenlm_crossentropy_cv.py"
+PYTHON_SCRIPT="$SCRIPT_DIR/llm_kenlm_crossentropy_cv.py"
 LANGUAGE="${LANGUAGE:-python}"                                   # Language name (for output files)
 if [ "$LANGUAGE" = "c" ]; then
-    DATASET="${DATASET:-dataset_final_no_comments_less_normalized}"           # C defaults to c_dataset_final_...
+    DATASET="${DATASET:-dataset_final_no_comments_normalized}"           # C defaults to c_dataset_final_...
 else
-    DATASET="${DATASET:-dataset_no_comments_less_normalized}"                 # Dataset name: dataset | dataset_no_comments | dataset_no_comments_normalized
+    DATASET="${DATASET:-dataset_no_comments_normalized}"                 # Dataset name: dataset | dataset_no_comments | dataset_no_comments_normalized
 fi
-INPUT="../../datasets/${LANGUAGE}_${DATASET}.jsonl"           # Input JSONL file
+INPUT="${INPUT:-$REPO_ROOT/datasets/${LANGUAGE}_${DATASET}.jsonl}"           # Input JSONL file
 KENLM="${KENLM:-true}"                                         # true/false: Enable KenLM
 HF="${HF:-false}"                                             # true/false: Enable HuggingFace LLM
 MODEL="${MODEL:-Salesforce/codet5-small}"                  # HuggingFace model ID | microsoft/CodeGPT-small-py | Salesforce/codegen-350M-multi

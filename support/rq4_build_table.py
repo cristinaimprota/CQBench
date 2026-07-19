@@ -263,8 +263,8 @@ PYTHON_CONFIG = LanguageConfig(
     semgrep_requires_full_dataset=True,
     entropy_paths={
         author: ROOT
-        / "EXTENDED/naturalness/RESULS_TREESITTER/python_less_norm_treesitter"
-        / f"python_KenLM_{author}_code_6gram_treesitter_dataset_no_comments_less_normalized.csv"
+        / "EXTENDED/naturalness/RESULS_TREESITTER/python_norm_treesitter"
+        / f"python_KenLM_{author}_code_6gram_treesitter_dataset_no_comments_normalized.csv"
         for author in ("human", "chatgpt", "dsc", "qwen")
     },
     entropy_language="python",
@@ -296,8 +296,8 @@ JAVA_CONFIG = LanguageConfig(
     semgrep_requires_full_dataset=False,
     entropy_paths={
         author: ROOT
-        / "EXTENDED/naturalness/RESULS_TREESITTER/java_less_norm_treesitter"
-        / f"java_KenLM_{author}_code_6gram_treesitter_dataset_no_comments_less_normalized.csv"
+        / "EXTENDED/naturalness/RESULS_TREESITTER/java_norm_treesitter"
+        / f"java_KenLM_{author}_code_6gram_treesitter_dataset_no_comments_normalized.csv"
         for author in ("human", "chatgpt", "dsc", "qwen")
     },
     entropy_language="java",
@@ -333,10 +333,10 @@ C_CONFIG = LanguageConfig(
     entropy_paths={
         author: ROOT
         / "EXTENDED/naturalness/RESULTS_REGEX"
-        / "c_results_KenLM_10fold_regex_no_comments_final_less_normalized"
+        / "c_results_KenLM_10fold_regex_no_comments_final_normalized"
         / (
             f"c_KenLM_{author}_code_6gram_regex_"
-            "dataset_final_no_comments_less_normalized.csv"
+            "dataset_final_no_comments_normalized.csv"
         )
         for author in ("human", "gptoss", "dsc", "qwen")
     },

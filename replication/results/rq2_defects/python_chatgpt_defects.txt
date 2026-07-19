@@ -1,10 +1,10 @@
-📊 Statistiche pylint + ODC
+Pylint + ODC statistics
 ────────────────────────────
-🔢 Numero totale di difetti (ODC != --): 185110
-🔣 Numero di istanze UNICHE difettose: 110528 (38.75%)
-➗ Numero medio di difetti per istanza: 1.67
+Total number of defects (ODC != --): 185110
+Unique defective instances: 110528 (38.75%)
+Average defects per instance: 1.67
 
-📂 Difetti per categoria ODC:
+Defects per ODC category:
   - Assignment: 55839
   - Algorithm: 51958
   - Interface: 42061
@@ -12,7 +12,7 @@
   - Function/Class/Object: 9121
   - Timing: 16
 
-🔍 Difetti più frequenti (simboli pylint):
+Most frequent defects (pylint symbols):
   - unused-argument: 32992
   - no-else-return: 27446
   - unused-variable: 14408
@@ -24,16 +24,16 @@
   - raise-missing-from: 5509
   - redefined-builtin: 3860
 
-📌 Distribuzione #categorie ODC per istanza:
-  - 89814 istanze con 1 categorie ODC distinte
-  - 18255 istanze con 2 categorie ODC distinte
-  - 2238 istanze con 3 categorie ODC distinte
-  - 216 istanze con 4 categorie ODC distinte
-  - 5 istanze con 5 categorie ODC distinte
+Distribution of #distinct ODC categories per instance:
+  - 89814 instances with 1 distinct ODC categories
+  - 18255 instances with 2 distinct ODC categories
+  - 2238 instances with 3 distinct ODC categories
+  - 216 instances with 4 distinct ODC categories
+  - 5 instances with 5 distinct ODC categories
 
-📚 Distribuzione dei simboli per ciascuna categoria ODC:
+Distribution of symbols per ODC category:
 
-🔸 Algorithm (51958 difetti totali)
+Algorithm (51958 total defects)
    • no-else-return: 27446
    • inconsistent-return-statements: 3032
    • consider-using-enumerate: 2876
@@ -117,7 +117,7 @@
    • invalid-format-returned: 1
    • condition-evals-to-constant: 1
 
-🔸 Function/Class/Object (9121 difetti totali)
+Function/Class/Object (9121 total defects)
    • too-few-public-methods: 6465
    • redefined-outer-name: 2101
    • useless-object-inheritance: 116
@@ -141,7 +141,7 @@
    • unexpected-special-method-signature: 1
    • bad-staticmethod-argument: 1
 
-🔸 Assignment (55839 difetti totali)
+Assignment (55839 total defects)
    • unused-argument: 32992
    • unused-variable: 14408
    • redefined-builtin: 3860
@@ -171,7 +171,7 @@
    • class-variable-slots-conflict: 1
    • invalid-star-assignment-target: 1
 
-🔸 Interface (42061 difetti totali)
+Interface (42061 total defects)
    • unspecified-encoding: 14312
    • protected-access: 7108
    • no-member: 6032
@@ -238,7 +238,7 @@
    • use-sequence-for-iteration: 1
    • non-ascii-name: 1
 
-🔸 Checking (26115 difetti totali)
+Checking (26115 total defects)
    • missing-timeout: 6348
    • raise-missing-from: 5509
    • bare-except: 3045
@@ -260,5 +260,5 @@
    • redundant-unittest-assert: 2
    • contextmanager-generator-missing-cleanup: 1
 
-🔸 Timing (16 difetti totali)
+Timing (16 total defects)
    • useless-with-lock: 16
