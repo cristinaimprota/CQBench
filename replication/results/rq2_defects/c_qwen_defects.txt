@@ -1,10 +1,7 @@
-Specify name of model to analyze: 
 Clang-tidy + ODC stats
 ────────────────────────────
 Total number of defects: 239334
 Total number of defective samples: 128912 (49.21%)
-Total number of samples with syntax errors: 67382 (25.72%)
-Total number of syntax error messages: 106979
 Average number of defects per sample: 1.86
 
 Total defects divided per ODC Defect Type::

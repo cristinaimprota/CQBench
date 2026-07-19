@@ -1,7 +1,6 @@
 Did you change the total size of the dataset?
 📊 Statistiche PMD + ODC
 ────────────────────────────
-🔢 Numero totale di funzioni nel dataset: 221795
 🔢 Numero totale di difetti (ODC != --): 202129
 🔣 Numero di file UNICI difettosi: 76049 (34.29%)
 ➗ Numero medio di difetti per file difettoso: 2.66

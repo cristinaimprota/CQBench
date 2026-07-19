@@ -1,9 +1,7 @@
 📊 Statistiche pylint + ODC
 ────────────────────────────
-🔢 Numero totale di funzioni nel dataset: 265637
 🔢 Numero totale di difetti (ODC != --): 319643
 🔣 Numero di istanze UNICHE difettose: 173899 (65.46%)
-🔢 Numero totale di syntax errors: 1171 (0.44%)
 ➗ Numero medio di difetti per istanza: 1.84
 
 📂 Difetti per categoria ODC:

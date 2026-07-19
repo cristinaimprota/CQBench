@@ -1,8 +1,4 @@
-Total skipped functions: 228 (errors + incompatible rules)
-Total scanned functions: 221796 (100%)
-Total clean functions: 214908 (96.89%)
 Total defective functions (excluding errors): 6660 (3.00%)
-Total errors: 228. Errors w/o duplicates: 228 (0.10%)
 Total issues (considering multiple issues per function and excluding errors): 11677
 
 Final Unified CWE Set (without duplicates): 42
