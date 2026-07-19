@@ -15,7 +15,6 @@ sample of all programming tasks.
 - `benchmark/references.jsonl`: human structural and complexity references.
 - `benchmark/baselines/`: historical Human, OpenAI, DeepSeek, and Qwen code.
 - `benchmark/results/`: keyed historical evaluation results.
-- `benchmark/reports/`: tables and PNG/PDF figures.
 - `cqbench/`: evaluator, reporting, and audit implementation.
 - `cqbench/rules/`: frozen Semgrep rules and rule manifest.
 - `mappings/`: language-organized analyzer-to-ODC mappings.
@@ -35,7 +34,6 @@ CQBench/
 │   ├── references.jsonl
 │   ├── baselines/
 │   ├── results/
-│   ├── reports/
 │   └── comparisons/
 ├── cqbench/
 │   └── rules/
@@ -68,9 +66,6 @@ GPT-OSS for C, matching the study convention.
 ## Validate the package
 
 ```bash
-python -m cqbench audit-large \
-  --benchmark-dir benchmark
-
 sha256sum -c MANIFEST.sha256
 ```
 
@@ -88,7 +83,11 @@ The Docker image installs them.
 
 ```bash
 docker build -t cqbench:1.0 .
-docker run --rm cqbench:1.0 audit-large --benchmark-dir benchmark
+docker run --rm \
+  -v "$PWD/benchmark:/workspace/benchmark:ro" \
+  cqbench:1.0 validate-submission \
+  --tasks benchmark/tasks.jsonl \
+  --predictions benchmark/baselines/human.jsonl
 ```
 
 To evaluate a host-side prediction file:

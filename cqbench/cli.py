@@ -10,7 +10,7 @@ from .historical import (
     export_large_historical_results,
     subset_results,
 )
-from .large import audit_large_benchmark, build_large_benchmark
+from .large import build_large_benchmark
 from .report import compare_results, write_report
 from .rules import vendor_rules
 
@@ -53,9 +53,6 @@ def parser() -> argparse.ArgumentParser:
     large.add_argument("--output-dir", type=Path, required=True)
     large.add_argument("--difficulty-threshold", type=int, default=3)
     large.add_argument("--overwrite", action="store_true")
-
-    large_audit = commands.add_parser("audit-large")
-    large_audit.add_argument("--benchmark-dir", type=Path, required=True)
 
     validate = commands.add_parser("validate-submission")
     validate.add_argument("--tasks", type=Path, required=True)
@@ -133,14 +130,6 @@ def main() -> None:
                     threshold=args.difficulty_threshold,
                     overwrite=args.overwrite,
                 ),
-                indent=2,
-                sort_keys=True,
-            )
-        )
-    elif args.command == "audit-large":
-        print(
-            json.dumps(
-                audit_large_benchmark(args.benchmark_dir),
                 indent=2,
                 sort_keys=True,
             )

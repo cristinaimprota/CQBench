@@ -26,9 +26,6 @@ The same complexity gate applies to evaluated submissions. A structurally
 valid output with both ratios below 0.10 is labeled
 `complexity_degenerate` and is excluded from strict-clean credit.
 
-The formula, drop counts, analyzer versions, rule hash, artifact hashes, and
-counts are recorded in `manifest.json`.
-
 ## Evaluation
 
 Validate a model's JSONL predictions before running analyzers:
@@ -40,8 +37,9 @@ python -m cqbench validate-submission \
 ```
 
 Frozen historical results for Human, OpenAI, DeepSeek, and Qwen are in
-`results/`; their reports and figures are in `reports/`. They reuse existing
-study findings and metrics through explicit `(source_id, author)` keys.
+`results/`. They reuse existing study findings and metrics through explicit
+`(source_id, author)` keys. Generate report tables and figures for any result
+file with `python -m cqbench report`.
 
 Compare a new evaluated result file with the baselines:
 

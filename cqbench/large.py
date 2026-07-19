@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 from collections import Counter
 from pathlib import Path
 from typing import Any, Mapping
@@ -8,8 +7,8 @@ from typing import Any, Mapping
 import pandas as pd
 import numpy as np
 
-from .config import BENCHMARK_VERSION, LANGUAGES, ODC_COLUMNS, ODC_LABELS, ROOT, SEED
-from .io import read_jsonl, sha256_file, sha256_text, write_json_atomic, write_jsonl_atomic
+from .config import BENCHMARK_VERSION, LANGUAGES, ODC_COLUMNS, ODC_LABELS, SEED
+from .io import read_jsonl, sha256_text, write_jsonl_atomic
 from .legacy import cwes_from_raw, load_raw_vulnerabilities
 from .structural import analyze_structure, canonical_prompt, extract_signature
 
@@ -374,145 +373,4 @@ def build_large_benchmark(
         openai,
         overwrite=overwrite,
     )
-    artifact_paths = {
-        "tasks": output_dir / "tasks.jsonl",
-        "references": output_dir / "references.jsonl",
-        **{
-            f"baseline_{author}": output_dir / "baselines" / f"{author}.jsonl"
-            for author in (*all_authors, "openai")
-            if (output_dir / "baselines" / f"{author}.jsonl").exists()
-        },
-    }
-    semgrep_manifest = json.loads(
-        (ROOT / "cqbench/rules/manifest.json").read_text(encoding="utf-8")
-    )
-    manifest = {
-        "benchmark_version": BENCHMARK_VERSION,
-        "release_profile": "large-issue-prone-challenge-set",
-        "selection_status": "automated-threshold",
-        "seed": SEED,
-        "task_count": len(records),
-        "minimum_required_task_count": MINIMUM_BENCHMARK_SIZE,
-        "difficulty_definition": {
-            "formula": (
-                "second_highest_complexity_qualified_model("
-                "defects_total + vulns_total) >= threshold"
-            ),
-            "threshold": threshold,
-            "rationale": (
-                "At least two non-degenerate model outputs each have at least "
-                "three findings and share an ODC type or CWE."
-            ),
-        },
-        "complexity_gate": {
-            "formula": (
-                "generated_nloc / human_nloc >= 0.10 OR "
-                "generated_halstead_v / human_halstead_v >= 0.10"
-            ),
-            "ratio_threshold": 0.10,
-        },
-        "finding_type_gate": (
-            "same ODC type or normalized CWE present in at least two "
-            "complexity-qualified model outputs with at least threshold findings"
-        ),
-        "language_counts": dict(Counter(row["language"] for row in records)),
-        "profile_counts": dict(Counter(row["stratum"] for row in records)),
-        "drop_counts": drop_counts,
-        "analysis_profile": {
-            "pylint": "3.3.6",
-            "pmd": "7.11.0",
-            "clang_tidy": "18",
-            "semgrep": semgrep_manifest["semgrep_version"],
-            "semgrep_rule_count": semgrep_manifest["rule_count"],
-            "semgrep_rules_sha256": semgrep_manifest["sha256"],
-        },
-        "artifacts": {
-            name: {
-                "path": str(path.relative_to(output_dir)),
-                "rows": counts[
-                    name.removeprefix("baseline_")
-                    if name.startswith("baseline_")
-                    else name
-                ],
-                "sha256": sha256_file(path),
-            }
-            for name, path in artifact_paths.items()
-        },
-    }
-    write_json_atomic(
-        output_dir / "manifest.json",
-        manifest,
-        overwrite=overwrite,
-    )
-    return manifest
-
-
-def audit_large_benchmark(output_dir: Path) -> dict[str, Any]:
-    manifest = json.loads(
-        (output_dir / "manifest.json").read_text(encoding="utf-8")
-    )
-    tasks = list(read_jsonl(output_dir / "tasks.jsonl"))
-    references = list(read_jsonl(output_dir / "references.jsonl"))
-    task_ids = [row["task_id"] for row in tasks]
-    assert len(tasks) == manifest["task_count"]
-    assert len(tasks) >= manifest["minimum_required_task_count"]
-    assert len(task_ids) == len(set(task_ids))
-    assert len(references) == len(tasks)
-    assert {row["task_id"] for row in references} == set(task_ids)
-    threshold = manifest["difficulty_definition"]["threshold"]
-    assert all(row["difficulty"]["score"] >= threshold for row in tasks)
-    assert all(
-        row["difficulty"]["consensus_odc"]
-        or row["difficulty"]["consensus_cwes"]
-        for row in tasks
-    )
-    assert all(
-        sum(
-            row["difficulty"]["complexity_qualified_models"][author]
-            and row["difficulty"]["model_issue_counts"][author] >= threshold
-            for author in row["difficulty"]["model_issue_counts"]
-        )
-        >= 2
-        for row in tasks
-    )
-    assert all(
-        isinstance(row.get("human_complexity"), dict)
-        for row in references
-    )
-    expected_ids = set(task_ids)
-    language_ids = {
-        language: {
-            row["task_id"] for row in tasks if row["language"] == language
-        }
-        for language in ("python", "java", "c")
-    }
-    coverage = {}
-    for author, expected in {
-        "human": expected_ids,
-        "dsc": expected_ids,
-        "qwen": expected_ids,
-        "openai": expected_ids,
-        "chatgpt": language_ids["python"] | language_ids["java"],
-        "gptoss": language_ids["c"],
-    }.items():
-        rows = list(read_jsonl(output_dir / "baselines" / f"{author}.jsonl"))
-        ids = [row["task_id"] for row in rows]
-        assert len(ids) == len(set(ids))
-        assert set(ids) == expected
-        coverage[author] = len(ids)
-    for artifact in manifest["artifacts"].values():
-        path = output_dir / artifact["path"]
-        assert sha256_file(path) == artifact["sha256"]
-    assert sha256_file(ROOT / "cqbench/rules/semgrep.json") == manifest[
-        "analysis_profile"
-    ]["semgrep_rules_sha256"]
-    return {
-        "benchmark_version": manifest["benchmark_version"],
-        "release_profile": manifest["release_profile"],
-        "task_count": len(tasks),
-        "threshold": threshold,
-        "language_counts": dict(Counter(row["language"] for row in tasks)),
-        "profile_counts": dict(Counter(row["stratum"] for row in tasks)),
-        "baseline_coverage": coverage,
-        "hashes_valid": True,
-    }
+    return counts
