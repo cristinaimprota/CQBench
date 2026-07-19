@@ -33,8 +33,7 @@ CQBench/
 │   ├── tasks.jsonl
 │   ├── references.jsonl
 │   ├── baselines/
-│   ├── results/
-│   └── comparisons/
+│   └── results/
 ├── cqbench/
 │   └── rules/
 ├── mappings/

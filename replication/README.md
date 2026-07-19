@@ -19,7 +19,6 @@ behavior independently (`../cqbench/analyzers.py`).
 | Analyzer→ODC mappings | **benchmark** — `../mappings/{python,java,c}/*.xlsx` |
 | Tool configs + frozen rules | **benchmark** — `../cqbench/rules/` + `../cqbench/analyzers.py` |
 | Complexity-metric computation | **benchmark** — `../support/complexity_metrics_extended.py` |
-| Similarity-metric scripts | `scripts/metrics/` |
 | Naturalness training + scoring | `scripts/naturalness/` |
 | RQ1 structural/style results | `results/rq1_structural_style/` |
 | RQ2 defect results | `results/rq2_defects/` |
@@ -28,13 +27,9 @@ behavior independently (`../cqbench/analyzers.py`).
 | Model consistency calibration (§4.2) | `calibration/` |
 | Source dataset + per-function tables | **Zenodo** — `../data/DATA.md` |
 
-## `scripts/metrics/`
-
-- `output_similarity_metrics.py`, `crystal_bleu.py` — code-similarity metrics
-  (CrystalBLEU, normalized edit distance) reported in RQ1.
-- The structural-complexity metrics are computed by
-  `../support/complexity_metrics_extended.py` (kept in the benchmark because the
-  evaluator imports the exact definitions).
+Structural-complexity metrics are computed by
+`../support/complexity_metrics_extended.py` (kept in the benchmark because the
+evaluator imports the exact definitions).
 
 ## `scripts/naturalness/`
 
@@ -57,8 +52,8 @@ Figure/plot scripts are intentionally omitted.
 
 ## `results/`
 
-- `rq1_structural_style/` — `{python,java,c}_complexity.txt` (complexity
-  summaries) and `similarity_crystalbleu_editdistance.txt`.
+- `rq1_structural_style/` — `{python,java,c}_metrics.txt` (full per-function
+  structural-complexity summaries).
 - `rq2_defects/` — per-author Pylint/PMD/Clang-tidy + ODC defect statistics for
   all three languages (`{python,java}_{human,chatgpt,dsc,qwen}_defects.txt`,
   `c_{human,gptoss,dsc,qwen}_defects.txt`; `gptoss` is the OpenAI model for C).

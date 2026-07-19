@@ -1,0 +1,214 @@
+
+Stats for human_code (280405 functions):
+  NLOC                   | Avg:    26.41 | Min:     1.00 | Median:    18.00 | P90:    58.00 | Max:   369.00 | Std:    25.43
+  CCN                    | Avg:     5.97 | Min:     1.00 | Median:     4.00 | P90:    13.00 | Max:   182.00 | Std:     6.90
+  PARAMETER_COUNT        | Avg:     2.17 | Min:     0.00 | Median:     2.00 | P90:     4.00 | Max:    74.00 | Std:     1.72
+  MAX_NESTING_DEPTH      | Avg:     1.13 | Min:     0.00 | Median:     1.00 | P90:     3.00 | Max:    12.00 | Std:     1.12
+  DISTINCT_OPERATORS     | Avg:    17.59 | Min:     4.00 | Median:    17.00 | P90:    25.00 | Max:    42.00 | Std:     5.34
+  TOTAL_OPERATORS        | Avg:   112.84 | Min:     4.00 | Median:    74.00 | P90:   257.00 | Max:  1044.00 | Std:   111.94
+  DISTINCT_OPERANDS      | Avg:    24.58 | Min:     1.00 | Median:    19.00 | P90:    49.00 | Max:   428.00 | Std:    18.85
+  TOTAL_OPERANDS         | Avg:    64.47 | Min:     1.00 | Median:    41.00 | P90:   149.00 | Max:  1385.00 | Std:    67.07
+  HALSTEAD_VOLUME        | Avg:  1030.04 | Min:    11.61 | Median:   603.87 | P90:  2486.68 | Max: 19468.18 | Std:  1180.89
+  HALSTEAD_DIFFICULTY    | Avg:    21.78 | Min:     2.00 | Median:    18.17 | P90:    40.07 | Max:   276.82 | Std:    14.30
+  HALSTEAD_EFFORT        | Avg: 35447.75 | Min:    23.22 | Median: 11062.63 | P90: 93834.18 | Max: 1731115.43 | Std: 66893.76
+  MAINTAINABILITY_INDEX  | Avg:    52.08 | Min:     0.00 | Median:    52.76 | P90:    67.13 | Max:    91.53 | Std:    11.68
+
+Stats for dsc_code (298044 functions):
+  NLOC                   | Avg:     6.84 | Min:     1.00 | Median:     6.00 | P90:    13.00 | Max:    56.00 | Std:     4.56
+  CCN                    | Avg:     1.89 | Min:     1.00 | Median:     1.00 | P90:     4.00 | Max:    28.00 | Std:     1.32
+  PARAMETER_COUNT        | Avg:     1.55 | Min:     0.00 | Median:     1.00 | P90:     3.00 | Max:    25.00 | Std:     1.49
+  MAX_NESTING_DEPTH      | Avg:     0.56 | Min:     0.00 | Median:     0.00 | P90:     1.00 | Max:     6.00 | Std:     0.71
+  DISTINCT_OPERATORS     | Avg:    12.01 | Min:     4.00 | Median:    12.00 | P90:    18.00 | Max:    31.00 | Std:     4.11
+  TOTAL_OPERATORS        | Avg:    28.97 | Min:     4.00 | Median:    23.00 | P90:    59.00 | Max:   219.00 | Std:    21.85
+  DISTINCT_OPERANDS      | Avg:     8.68 | Min:     1.00 | Median:     8.00 | P90:    15.00 | Max:    59.00 | Std:     4.86
+  TOTAL_OPERANDS         | Avg:    15.35 | Min:     1.00 | Median:    12.00 | P90:    32.00 | Max:   201.00 | Std:    12.42
+  HALSTEAD_VOLUME        | Avg:   205.51 | Min:    11.61 | Median:   151.27 | P90:   451.79 | Max:  1832.56 | Std:   179.30
+  HALSTEAD_DIFFICULTY    | Avg:    10.47 | Min:     2.00 | Median:     8.50 | P90:    20.06 | Max:    95.88 | Std:     7.22
+  HALSTEAD_EFFORT        | Avg:  3275.73 | Min:    23.22 | Median:  1293.14 | P90:  8720.89 | Max: 166987.26 | Std:  5287.69
+  MAINTAINABILITY_INDEX  | Avg:    68.50 | Min:    37.94 | Median:    67.73 | P90:    80.80 | Max:    92.41 | Std:     8.96
+
+Stats for qwen_code (302657 functions):
+  NLOC                   | Avg:    10.66 | Min:     1.00 | Median:     9.00 | P90:    22.00 | Max:    82.00 | Std:     8.36
+  CCN                    | Avg:     2.79 | Min:     1.00 | Median:     2.00 | P90:     6.00 | Max:    88.00 | Std:     2.35
+  PARAMETER_COUNT        | Avg:     1.87 | Min:     0.00 | Median:     2.00 | P90:     4.00 | Max:    47.00 | Std:     1.60
+  MAX_NESTING_DEPTH      | Avg:     0.85 | Min:     0.00 | Median:     1.00 | P90:     2.00 | Max:    12.00 | Std:     0.90
+  DISTINCT_OPERATORS     | Avg:    13.75 | Min:     4.00 | Median:    14.00 | P90:    20.00 | Max:    34.00 | Std:     4.85
+  TOTAL_OPERATORS        | Avg:    46.69 | Min:     4.00 | Median:    37.00 | P90:    99.00 | Max:   340.00 | Std:    38.34
+  DISTINCT_OPERANDS      | Avg:    11.81 | Min:     1.00 | Median:    10.00 | P90:    22.00 | Max:   114.00 | Std:     7.69
+  TOTAL_OPERANDS         | Avg:    24.84 | Min:     1.00 | Median:    19.00 | P90:    55.00 | Max:   285.00 | Std:    22.00
+  HALSTEAD_VOLUME        | Avg:   358.32 | Min:    11.61 | Median:   262.33 | P90:   818.68 | Max:  3405.30 | Std:   337.56
+  HALSTEAD_DIFFICULTY    | Avg:    13.91 | Min:     2.00 | Median:    12.25 | P90:    26.17 | Max:   142.00 | Std:     9.48
+  HALSTEAD_EFFORT        | Avg:  7655.76 | Min:    23.22 | Median:  3289.63 | P90: 20151.08 | Max: 258672.47 | Std: 12140.06
+  MAINTAINABILITY_INDEX  | Avg:    63.83 | Min:    26.84 | Median:    62.30 | P90:    79.44 | Max:    92.41 | Std:    11.28
+
+Stats for gptoss_code (270935 functions):
+  NLOC                   | Avg:    14.51 | Min:     2.00 | Median:    12.00 | P90:    27.00 | Max:   110.00 | Std:     9.54
+  CCN                    | Avg:     4.68 | Min:     1.00 | Median:     4.00 | P90:     9.00 | Max:    75.00 | Std:     3.52
+  PARAMETER_COUNT        | Avg:     2.14 | Min:     0.00 | Median:     2.00 | P90:     4.00 | Max:    33.00 | Std:     1.66
+  MAX_NESTING_DEPTH      | Avg:     0.93 | Min:     0.00 | Median:     1.00 | P90:     2.00 | Max:    32.00 | Std:     0.91
+  DISTINCT_OPERATORS     | Avg:    17.12 | Min:     4.00 | Median:    17.00 | P90:    23.00 | Max:    38.00 | Std:     4.65
+  TOTAL_OPERATORS        | Avg:    69.55 | Min:     4.00 | Median:    57.00 | P90:   135.00 | Max:   419.00 | Std:    48.80
+  DISTINCT_OPERANDS      | Avg:    15.23 | Min:     1.00 | Median:    13.00 | P90:    26.00 | Max:   184.00 | Std:     8.54
+  TOTAL_OPERANDS         | Avg:    36.21 | Min:     1.00 | Median:    29.00 | P90:    73.00 | Max:   369.00 | Std:    27.53
+  HALSTEAD_VOLUME        | Avg:   553.76 | Min:    15.51 | Median:   425.00 | P90:  1153.29 | Max:  4400.95 | Std:   447.97
+  HALSTEAD_DIFFICULTY    | Avg:    19.94 | Min:     2.00 | Median:    17.71 | P90:    34.00 | Max:   176.75 | Std:    11.05
+  HALSTEAD_EFFORT        | Avg: 14948.70 | Min:    31.02 | Median:  7627.12 | P90: 36556.24 | Max: 454005.81 | Std: 21388.78
+  MAINTAINABILITY_INDEX  | Avg:    57.67 | Min:    28.36 | Median:    57.49 | P90:    68.87 | Max:    84.96 | Std:     8.85
+
+Aggregated Stats across ALL fields (1152041 functions):
+  NLOC                   | Avg:    14.41 | Min:     1.00 | Median:    10.00 | P90:    29.00 | Max:   369.00 | Std:    16.01
+  CCN                    | Avg:     3.78 | Min:     1.00 | Median:     3.00 | P90:     8.00 | Max:   182.00 | Std:     4.35
+  PARAMETER_COUNT        | Avg:     1.93 | Min:     0.00 | Median:     2.00 | P90:     4.00 | Max:    74.00 | Std:     1.64
+  MAX_NESTING_DEPTH      | Avg:     0.86 | Min:     0.00 | Median:     1.00 | P90:     2.00 | Max:    32.00 | Std:     0.94
+  DISTINCT_OPERATORS     | Avg:    15.03 | Min:     4.00 | Median:    15.00 | P90:    22.00 | Max:    42.00 | Std:     5.29
+  TOTAL_OPERATORS        | Avg:    63.58 | Min:     4.00 | Median:    43.00 | P90:   134.00 | Max:  1044.00 | Std:    71.44
+  DISTINCT_OPERANDS      | Avg:    14.91 | Min:     1.00 | Median:    12.00 | P90:    29.00 | Max:   428.00 | Std:    12.68
+  TOTAL_OPERANDS         | Avg:    34.71 | Min:     1.00 | Median:    22.00 | P90:    75.00 | Max:  1385.00 | Std:    42.18
+  HALSTEAD_VOLUME        | Avg:   528.24 | Min:    11.61 | Median:   310.23 | P90:  1167.83 | Max: 19468.18 | Std:   721.69
+  HALSTEAD_DIFFICULTY    | Avg:    16.35 | Min:     2.00 | Median:    13.91 | P90:    30.88 | Max:   276.82 | Std:    11.67
+  HALSTEAD_EFFORT        | Avg: 15002.27 | Min:    23.22 | Median:  4397.75 | P90: 33745.14 | Max: 1731115.43 | Std: 37338.88
+  MAINTAINABILITY_INDEX  | Avg:    60.73 | Min:     0.00 | Median:    60.56 | P90:    77.37 | Max:    92.41 | Std:    12.01
+
+Statistical tests (Welch, MWU, Cliff's delta + bootstrap CI)
+p-values use SciPy; q-values use Benjamini-Hochberg FDR.
+Bootstrap resamples: 1000
+
+Metric: nloc
+  dsc_code vs gptoss_code | t=-380.345, p=0.000e+00 (q=0.000e+00) | U=17024471284.0, p=0.000e+00 (q=0.000e+00) | delta=-0.578 [-0.581, -0.576]
+  dsc_code vs human_code | t=-401.484, p=0.000e+00 (q=0.000e+00) | U=11309090808.0, p=0.000e+00 (q=0.000e+00) | delta=-0.729 [-0.731, -0.728]
+  dsc_code vs qwen_code | t=-220.345, p=0.000e+00 (q=0.000e+00) | U=33732759776.0, p=0.000e+00 (q=0.000e+00) | delta=-0.252 [-0.255, -0.249]
+  gptoss_code vs human_code | t=-231.615, p=0.000e+00 (q=0.000e+00) | U=26736412319.0, p=0.000e+00 (q=0.000e+00) | delta=-0.296 [-0.299, -0.293]
+  gptoss_code vs qwen_code | t= 161.369, p=0.000e+00 (q=0.000e+00) | U=52507029017.5, p=0.000e+00 (q=0.000e+00) | delta=+0.281 [+0.278, +0.283]
+  human_code vs qwen_code | t= 312.665, p=0.000e+00 (q=0.000e+00) | U=63922581087.0, p=0.000e+00 (q=0.000e+00) | delta=+0.506 [+0.504, +0.509]
+
+Metric: ccn
+  dsc_code vs gptoss_code | t=-387.736, p=0.000e+00 (q=0.000e+00) | U=15112108645.5, p=0.000e+00 (q=0.000e+00) | delta=-0.626 [-0.628, -0.624]
+  dsc_code vs human_code | t=-307.518, p=0.000e+00 (q=0.000e+00) | U=18911286952.0, p=0.000e+00 (q=0.000e+00) | delta=-0.547 [-0.550, -0.545]
+  dsc_code vs qwen_code | t=-181.439, p=0.000e+00 (q=0.000e+00) | U=34976542392.0, p=0.000e+00 (q=0.000e+00) | delta=-0.225 [-0.227, -0.222]
+  gptoss_code vs human_code | t= -87.915, p=0.000e+00 (q=0.000e+00) | U=37923005276.0, p=2.846e-01 (q=2.846e-01) | delta=-0.002 [-0.005, +0.001]
+  gptoss_code vs qwen_code | t= 236.751, p=0.000e+00 (q=0.000e+00) | U=57578203162.0, p=0.000e+00 (q=0.000e+00) | delta=+0.404 [+0.402, +0.407]
+  human_code vs qwen_code | t= 232.219, p=0.000e+00 (q=0.000e+00) | U=57517127286.0, p=0.000e+00 (q=0.000e+00) | delta=+0.355 [+0.353, +0.358]
+
+Metric: parameter_count
+  dsc_code vs gptoss_code | t=-139.558, p=0.000e+00 (q=0.000e+00) | U=31080424545.0, p=0.000e+00 (q=0.000e+00) | delta=-0.230 [-0.233, -0.227]
+  dsc_code vs human_code | t=-145.844, p=0.000e+00 (q=0.000e+00) | U=31896139838.5, p=0.000e+00 (q=0.000e+00) | delta=-0.237 [-0.240, -0.234]
+  dsc_code vs qwen_code | t= -80.725, p=0.000e+00 (q=0.000e+00) | U=39266152578.5, p=0.000e+00 (q=0.000e+00) | delta=-0.129 [-0.132, -0.127]
+  gptoss_code vs human_code | t=  -7.461, p=8.620e-14 (q=8.620e-14) | U=37689251940.5, p=2.424e-07 (q=2.458e-07) | delta=-0.008 [-0.011, -0.005]
+  gptoss_code vs qwen_code | t=  61.158, p=0.000e+00 (q=0.000e+00) | U=45291018106.5, p=0.000e+00 (q=0.000e+00) | delta=+0.105 [+0.102, +0.108]
+  human_code vs qwen_code | t=  68.235, p=0.000e+00 (q=0.000e+00) | U=47181697795.5, p=0.000e+00 (q=0.000e+00) | delta=+0.112 [+0.109, +0.115]
+
+Metric: max_nesting_depth
+  dsc_code vs gptoss_code | t=-166.642, p=0.000e+00 (q=0.000e+00) | U=31156423597.5, p=0.000e+00 (q=0.000e+00) | delta=-0.228 [-0.231, -0.226]
+  dsc_code vs human_code | t=-227.561, p=0.000e+00 (q=0.000e+00) | U=29543396864.0, p=0.000e+00 (q=0.000e+00) | delta=-0.293 [-0.296, -0.291]
+  dsc_code vs qwen_code | t=-137.957, p=0.000e+00 (q=0.000e+00) | U=37157372754.5, p=0.000e+00 (q=0.000e+00) | delta=-0.176 [-0.179, -0.174]
+  gptoss_code vs human_code | t= -73.762, p=0.000e+00 (q=0.000e+00) | U=34866805187.0, p=0.000e+00 (q=0.000e+00) | delta=-0.082 [-0.085, -0.079]
+  gptoss_code vs qwen_code | t=  31.369, p=8.116e-216 (q=8.231e-216) | U=43053985371.5, p=2.918e-271 (q=3.090e-271) | delta=+0.050 [+0.047, +0.053]
+  human_code vs qwen_code | t= 103.788, p=0.000e+00 (q=0.000e+00) | U=47860191470.0, p=0.000e+00 (q=0.000e+00) | delta=+0.128 [+0.125, +0.131]
+
+Metric: distinct_operators
+  dsc_code vs gptoss_code | t=-437.039, p=0.000e+00 (q=0.000e+00) | U=16670875789.5, p=0.000e+00 (q=0.000e+00) | delta=-0.587 [-0.589, -0.585]
+  dsc_code vs human_code | t=-443.216, p=0.000e+00 (q=0.000e+00) | U=17278867982.5, p=0.000e+00 (q=0.000e+00) | delta=-0.586 [-0.589, -0.584]
+  dsc_code vs qwen_code | t=-149.857, p=0.000e+00 (q=0.000e+00) | U=35552032502.5, p=0.000e+00 (q=0.000e+00) | delta=-0.212 [-0.215, -0.209]
+  gptoss_code vs human_code | t= -34.987, p=7.023e-268 (q=7.224e-268) | U=36607017680.5, p=6.921e-121 (q=7.221e-121) | delta=-0.036 [-0.039, -0.033]
+  gptoss_code vs qwen_code | t= 268.210, p=0.000e+00 (q=0.000e+00) | U=56427761651.0, p=0.000e+00 (q=0.000e+00) | delta=+0.376 [+0.374, +0.379]
+  human_code vs qwen_code | t= 286.532, p=0.000e+00 (q=0.000e+00) | U=58978203695.5, p=0.000e+00 (q=0.000e+00) | delta=+0.390 [+0.387, +0.392]
+
+Metric: total_operators
+  dsc_code vs gptoss_code | t=-398.113, p=0.000e+00 (q=0.000e+00) | U=15537605366.5, p=0.000e+00 (q=0.000e+00) | delta=-0.615 [-0.617, -0.613]
+  dsc_code vs human_code | t=-389.848, p=0.000e+00 (q=0.000e+00) | U=13078650511.0, p=0.000e+00 (q=0.000e+00) | delta=-0.687 [-0.689, -0.685]
+  dsc_code vs qwen_code | t=-220.552, p=0.000e+00 (q=0.000e+00) | U=33217280643.0, p=0.000e+00 (q=0.000e+00) | delta=-0.264 [-0.266, -0.261]
+  gptoss_code vs human_code | t=-187.196, p=0.000e+00 (q=0.000e+00) | U=30600016105.0, p=0.000e+00 (q=0.000e+00) | delta=-0.194 [-0.197, -0.191]
+  gptoss_code vs qwen_code | t= 195.698, p=0.000e+00 (q=0.000e+00) | U=54260608860.0, p=0.000e+00 (q=0.000e+00) | delta=+0.323 [+0.321, +0.326]
+  human_code vs qwen_code | t= 297.197, p=0.000e+00 (q=0.000e+00) | U=61871531634.5, p=0.000e+00 (q=0.000e+00) | delta=+0.458 [+0.456, +0.461]
+
+Metric: distinct_operands
+  dsc_code vs gptoss_code | t=-350.737, p=0.000e+00 (q=0.000e+00) | U=19707295661.5, p=0.000e+00 (q=0.000e+00) | delta=-0.512 [-0.514, -0.509]
+  dsc_code vs human_code | t=-433.193, p=0.000e+00 (q=0.000e+00) | U=12940543016.0, p=0.000e+00 (q=0.000e+00) | delta=-0.690 [-0.692, -0.688]
+  dsc_code vs qwen_code | t=-188.585, p=0.000e+00 (q=0.000e+00) | U=34832140171.5, p=0.000e+00 (q=0.000e+00) | delta=-0.228 [-0.230, -0.225]
+  gptoss_code vs human_code | t=-238.567, p=0.000e+00 (q=0.000e+00) | U=26110562960.0, p=0.000e+00 (q=0.000e+00) | delta=-0.313 [-0.315, -0.310]
+  gptoss_code vs qwen_code | t= 158.766, p=0.000e+00 (q=0.000e+00) | U=51449200903.5, p=0.000e+00 (q=0.000e+00) | delta=+0.255 [+0.252, +0.258]
+  human_code vs qwen_code | t= 333.952, p=0.000e+00 (q=0.000e+00) | U=63664995850.5, p=0.000e+00 (q=0.000e+00) | delta=+0.500 [+0.498, +0.503]
+
+Metric: total_operands
+  dsc_code vs gptoss_code | t=-362.315, p=0.000e+00 (q=0.000e+00) | U=17638615650.0, p=0.000e+00 (q=0.000e+00) | delta=-0.563 [-0.565, -0.561]
+  dsc_code vs human_code | t=-381.717, p=0.000e+00 (q=0.000e+00) | U=13169221817.5, p=0.000e+00 (q=0.000e+00) | delta=-0.685 [-0.687, -0.683]
+  dsc_code vs qwen_code | t=-206.220, p=0.000e+00 (q=0.000e+00) | U=34233479164.0, p=0.000e+00 (q=0.000e+00) | delta=-0.241 [-0.244, -0.238]
+  gptoss_code vs human_code | t=-205.891, p=0.000e+00 (q=0.000e+00) | U=28759710304.0, p=0.000e+00 (q=0.000e+00) | delta=-0.243 [-0.246, -0.240]
+  gptoss_code vs qwen_code | t= 171.482, p=0.000e+00 (q=0.000e+00) | U=52946143029.5, p=0.000e+00 (q=0.000e+00) | delta=+0.291 [+0.289, +0.294]
+  human_code vs qwen_code | t= 298.381, p=0.000e+00 (q=0.000e+00) | U=62528515791.5, p=0.000e+00 (q=0.000e+00) | delta=+0.474 [+0.471, +0.476]
+
+Metric: halstead_volume
+  dsc_code vs gptoss_code | t=-378.056, p=0.000e+00 (q=0.000e+00) | U=16075923112.5, p=0.000e+00 (q=0.000e+00) | delta=-0.602 [-0.604, -0.600]
+  dsc_code vs human_code | t=-365.788, p=0.000e+00 (q=0.000e+00) | U=12867341811.5, p=0.000e+00 (q=0.000e+00) | delta=-0.692 [-0.694, -0.690]
+  dsc_code vs qwen_code | t=-219.564, p=0.000e+00 (q=0.000e+00) | U=33530141772.0, p=0.000e+00 (q=0.000e+00) | delta=-0.257 [-0.259, -0.254]
+  gptoss_code vs human_code | t=-199.246, p=0.000e+00 (q=0.000e+00) | U=29702756981.5, p=0.000e+00 (q=0.000e+00) | delta=-0.218 [-0.221, -0.215]
+  gptoss_code vs qwen_code | t= 184.914, p=0.000e+00 (q=0.000e+00) | U=53942329914.0, p=0.000e+00 (q=0.000e+00) | delta=+0.316 [+0.313, +0.318]
+  human_code vs qwen_code | t= 290.420, p=0.000e+00 (q=0.000e+00) | U=62409570763.0, p=0.000e+00 (q=0.000e+00) | delta=+0.471 [+0.468, +0.473]
+
+Metric: halstead_difficulty
+  dsc_code vs gptoss_code | t=-378.785, p=0.000e+00 (q=0.000e+00) | U=16735943568.0, p=0.000e+00 (q=0.000e+00) | delta=-0.585 [-0.588, -0.583]
+  dsc_code vs human_code | t=-376.411, p=0.000e+00 (q=0.000e+00) | U=17214521492.0, p=0.000e+00 (q=0.000e+00) | delta=-0.588 [-0.590, -0.586]
+  dsc_code vs qwen_code | t=-158.485, p=0.000e+00 (q=0.000e+00) | U=35175907897.0, p=0.000e+00 (q=0.000e+00) | delta=-0.220 [-0.223, -0.217]
+  gptoss_code vs human_code | t= -53.672, p=0.000e+00 (q=0.000e+00) | U=36655018514.0, p=2.400e-112 (q=2.468e-112) | delta=-0.035 [-0.038, -0.032]
+  gptoss_code vs qwen_code | t= 220.633, p=0.000e+00 (q=0.000e+00) | U=55695522609.0, p=0.000e+00 (q=0.000e+00) | delta=+0.358 [+0.356, +0.361]
+  human_code vs qwen_code | t= 245.878, p=0.000e+00 (q=0.000e+00) | U=58315304134.0, p=0.000e+00 (q=0.000e+00) | delta=+0.374 [+0.372, +0.377]
+
+Metric: halstead_effort
+  dsc_code vs gptoss_code | t=-276.495, p=0.000e+00 (q=0.000e+00) | U=15859385082.0, p=0.000e+00 (q=0.000e+00) | delta=-0.607 [-0.610, -0.605]
+  dsc_code vs human_code | t=-253.929, p=0.000e+00 (q=0.000e+00) | U=13980833648.5, p=0.000e+00 (q=0.000e+00) | delta=-0.665 [-0.667, -0.664]
+  dsc_code vs qwen_code | t=-181.751, p=0.000e+00 (q=0.000e+00) | U=33941430540.5, p=0.000e+00 (q=0.000e+00) | delta=-0.247 [-0.250, -0.245]
+  gptoss_code vs human_code | t=-154.313, p=0.000e+00 (q=0.000e+00) | U=32069537855.0, p=0.000e+00 (q=0.000e+00) | delta=-0.156 [-0.159, -0.153]
+  gptoss_code vs qwen_code | t= 156.360, p=0.000e+00 (q=0.000e+00) | U=54879448628.5, p=0.000e+00 (q=0.000e+00) | delta=+0.339 [+0.336, +0.341]
+  human_code vs qwen_code | t= 216.721, p=0.000e+00 (q=0.000e+00) | U=61254966598.0, p=0.000e+00 (q=0.000e+00) | delta=+0.444 [+0.441, +0.446]
+
+Metric: maintainability_index
+  dsc_code vs gptoss_code | t= 458.143, p=0.000e+00 (q=0.000e+00) | U=64501648312.5, p=0.000e+00 (q=0.000e+00) | delta=+0.598 [+0.595, +0.600]
+  dsc_code vs human_code | t= 597.098, p=0.000e+00 (q=0.000e+00) | U=72052049679.0, p=0.000e+00 (q=0.000e+00) | delta=+0.724 [+0.722, +0.726]
+  dsc_code vs qwen_code | t= 177.801, p=0.000e+00 (q=0.000e+00) | U=56599459980.5, p=0.000e+00 (q=0.000e+00) | delta=+0.255 [+0.252, +0.258]
+  gptoss_code vs human_code | t= 200.696, p=0.000e+00 (q=0.000e+00) | U=48099036452.0, p=0.000e+00 (q=0.000e+00) | delta=+0.266 [+0.263, +0.269]
+  gptoss_code vs qwen_code | t=-231.179, p=0.000e+00 (q=0.000e+00) | U=28715403027.5, p=0.000e+00 (q=0.000e+00) | delta=-0.300 [-0.302, -0.297]
+  human_code vs qwen_code | t=-390.069, p=0.000e+00 (q=0.000e+00) | U=21274613024.0, p=0.000e+00 (q=0.000e+00) | delta=-0.499 [-0.501, -0.496]
+
+Paired Wilcoxon signed-rank tests
+Pairing: same row_id with function_index_in_row == 0
+Headline metrics: nloc, ccn, max_nesting_depth, halstead_volume, maintainability_index
+
+Paired metric: nloc
+  dsc_code vs gptoss_code | n_pairs= 222158 | W=  2221246204.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>gptoss_code)=0.182
+  dsc_code vs human_code | n_pairs= 228108 | W=  1177496268.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.114
+  dsc_code vs qwen_code | n_pairs= 181609 | W=  1836432291.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>qwen_code)=0.217
+  gptoss_code vs human_code | n_pairs= 270764 | W=  6560905075.0, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>human_code)=0.272
+  gptoss_code vs qwen_code | n_pairs= 214421 | W=  7588175582.5, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>qwen_code)=0.562
+  human_code vs qwen_code | n_pairs= 219921 | W=  3590485576.5, p=0.000e+00 (q=0.000e+00) | dominance(human_code>qwen_code)=0.762
+
+Paired metric: ccn
+  dsc_code vs gptoss_code | n_pairs= 222158 | W=   701551196.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>gptoss_code)=0.088
+  dsc_code vs human_code | n_pairs= 228108 | W=  1404261668.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.165
+  dsc_code vs qwen_code | n_pairs= 181609 | W=  1194850728.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>qwen_code)=0.224
+  gptoss_code vs human_code | n_pairs= 270764 | W= 10329841914.5, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>human_code)=0.498
+  gptoss_code vs qwen_code | n_pairs= 214421 | W=  2261788026.0, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>qwen_code)=0.766
+  human_code vs qwen_code | n_pairs= 219921 | W=  3194206747.5, p=0.000e+00 (q=0.000e+00) | dominance(human_code>qwen_code)=0.696
+
+Paired metric: max_nesting_depth
+  dsc_code vs gptoss_code | n_pairs= 222158 | W=  2348295715.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>gptoss_code)=0.358
+  dsc_code vs human_code | n_pairs= 228108 | W=  2420293224.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.312
+  dsc_code vs qwen_code | n_pairs= 181609 | W=   850751401.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>qwen_code)=0.227
+  gptoss_code vs human_code | n_pairs= 270764 | W=  4357073402.0, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>human_code)=0.409
+  gptoss_code vs qwen_code | n_pairs= 214421 | W=  2218887106.5, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>qwen_code)=0.373
+  human_code vs qwen_code | n_pairs= 219921 | W=  3660121906.0, p=4.587e-86 (q=4.587e-86) | dominance(human_code>qwen_code)=0.498
+
+Paired metric: halstead_volume
+  dsc_code vs gptoss_code | n_pairs= 222158 | W=  2066958416.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>gptoss_code)=0.162
+  dsc_code vs human_code | n_pairs= 228108 | W=  1646067610.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.143
+  dsc_code vs qwen_code | n_pairs= 181609 | W=  2366562993.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>qwen_code)=0.233
+  gptoss_code vs human_code | n_pairs= 270764 | W=  9552129210.5, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>human_code)=0.345
+  gptoss_code vs qwen_code | n_pairs= 214421 | W=  7531911724.5, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>qwen_code)=0.612
+  human_code vs qwen_code | n_pairs= 219921 | W=  4383862671.0, p=0.000e+00 (q=0.000e+00) | dominance(human_code>qwen_code)=0.727
+
+Paired metric: maintainability_index
+  dsc_code vs gptoss_code | n_pairs= 222158 | W=  2278647080.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>gptoss_code)=0.816
+  dsc_code vs human_code | n_pairs= 228108 | W=  1290667748.0, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>human_code)=0.873
+  dsc_code vs qwen_code | n_pairs= 181609 | W=  2485995414.5, p=0.000e+00 (q=0.000e+00) | dominance(dsc_code>qwen_code)=0.769
+  gptoss_code vs human_code | n_pairs= 270764 | W=  8601402786.5, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>human_code)=0.697
+  gptoss_code vs qwen_code | n_pairs= 214421 | W=  8108226873.5, p=0.000e+00 (q=0.000e+00) | dominance(gptoss_code>qwen_code)=0.421
+  human_code vs qwen_code | n_pairs= 219921 | W=  4128097969.0, p=0.000e+00 (q=0.000e+00) | dominance(human_code>qwen_code)=0.252
