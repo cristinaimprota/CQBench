@@ -148,6 +148,11 @@ def write_report(results_path: Path, output_dir: Path, model_name: str) -> dict[
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
 
+    # Palette extracted from the paper's figures (teal -> blue for categoricals,
+    # a Blues sequential colormap for heatmaps).
+    PAPER_PALETTE = ["#008080", "#40e0d0", "#afeeee", "#4169e1", "#87cefa", "#4682b4"]
+    HEATMAP_CMAP = "Blues"
+
     frame, summary = summarize(results_path)
     output_dir.mkdir(parents=True, exist_ok=True)
     summary_path = output_dir / "summary.json"
@@ -261,7 +266,10 @@ def write_report(results_path: Path, output_dir: Path, model_name: str) -> dict[
         .mean()
         .rename(columns=dict(plot_columns))
     )
-    axes = plot.plot(kind="bar", figsize=(10, 5), ylim=(0, 1), rot=0)
+    axes = plot.plot(
+        kind="bar", figsize=(10, 5), ylim=(0, 1), rot=0,
+        color=PAPER_PALETTE[: len(plot.columns)],
+    )
     axes.set_ylabel("Proportion of benchmark tasks")
     axes.set_title(f"CQBench static quality profile — {model_name}")
     axes.legend(loc="lower right")
@@ -276,17 +284,19 @@ def write_report(results_path: Path, output_dir: Path, model_name: str) -> dict[
             index="odc", columns="language", values="incidence"
         )
         figure, axis = plt.subplots(figsize=(7, 5))
-        image = axis.imshow(heatmap.to_numpy(), cmap="Reds", vmin=0, vmax=1)
+        image = axis.imshow(heatmap.to_numpy(), cmap=HEATMAP_CMAP, vmin=0, vmax=1)
         axis.set_xticks(range(len(heatmap.columns)), heatmap.columns)
         axis.set_yticks(range(len(heatmap.index)), heatmap.index)
         for row_index in range(len(heatmap.index)):
             for column_index in range(len(heatmap.columns)):
+                value = heatmap.iloc[row_index, column_index]
                 axis.text(
                     column_index,
                     row_index,
-                    f"{heatmap.iloc[row_index, column_index]:.2f}",
+                    f"{value:.2f}",
                     ha="center",
                     va="center",
+                    color="white" if value > 0.55 else "black",
                 )
         figure.colorbar(image, ax=axis, label="Task incidence")
         axis.set_title(f"ODC incidence — {model_name}")
