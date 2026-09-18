@@ -1,7 +1,7 @@
 FROM ubuntu:24.04
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG PMD_VERSION=7.11.0
+ARG PMD_VERSION=7.16.0
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     clang-tidy-18 \
