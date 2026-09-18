@@ -59,7 +59,7 @@ python -m pip install -e '.[analysis,test]'
 python -m pytest -q
 ```
 
-Full evaluation additionally requires PMD 7.11.0 and Clang-Tidy 18 on `PATH`.
+Full evaluation additionally requires PMD 7.16.0 and Clang-Tidy 18 on `PATH`.
 The Docker image installs them.
 
 ## Docker setup
